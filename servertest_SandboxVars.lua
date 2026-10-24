@@ -768,6 +768,36 @@ SandboxVars = {
     CSP_XPIntermediateBase = 60.0,
     -- Base XP awarded by Advanced practice recipes. Mín: 0.00 Máx: 500.00 Padrão: 100.00
     CSP_XPAdvancedBase = 100.0,
+    LpBContainerSignsDividerRules = false,
+    LpBContainerSignsDividerStyles = false,
+    LpBContainerSignsDividerDebug = false,
+    TableSawIsUnGiveWoodworkXp = false,
+    TableSawIsEnableDamageHand = false,
+    TableSawPlankArrangeNeatly = true,
+    -- Mín: 5 Máx: 100 Padrão: 6
+    TableSawCreatePlankNum = 6,
+    -- Mín: 50.00 Máx: 500.00 Padrão: 80.00
+    TableSawDurable = 80.0,
+    -- Mín: 100.00 Máx: 500.00 Padrão: 100.00
+    TableSawSawBladeDurable = 100.0,
+    -- Mín: 1.00 Máx: 100.00 Padrão: 100.00
+    SawingWoodAcceleration = 100.0,
+    TableSawDivider1 = false,
+    TableSawIsEnableWeightReduction = false,
+    -- Mín: 1.00 Máx: 100.00 Padrão: 100.00
+    TableSawLogPro = 100.0,
+    -- Mín: 1.00 Máx: 100.00 Padrão: 100.00
+    TableSawLargeBranchPro = 100.0,
+    -- Mín: 1.00 Máx: 100.00 Padrão: 100.00
+    TableSawSaplingPro = 100.0,
+    -- Mín: 1.00 Máx: 100.00 Padrão: 100.00
+    TableSawPlankPro = 100.0,
+    -- Mín: 1.00 Máx: 100.00 Padrão: 100.00
+    TableSawTreeBranch2Pro = 100.0,
+    -- Mín: 1.00 Máx: 100.00 Padrão: 100.00
+    TableSawSplintersPro = 100.0,
+    -- Mín: 1.00 Máx: 100.00 Padrão: 100.00
+    TableSawTwigsPro = 100.0,
     BuildingCraftDivider4 = false,
     MenuNotStayingOnTop = false,
     BuildingCraftDisableMenu = false,
@@ -809,35 +839,6 @@ SandboxVars = {
     BuildingCraftDivider5 = false,
     -- Example:camping_01_16;camping_01_64;
     BuildingCraftMaterialFilter = "",
-    -- Quando ativado, o Navigator mostra o próprio mapa mesmo se a sandbox do mundo desativar o mapa ou o minimapa, e remove imediatamente a névoa de guerra para revelar o mapa inteiro.
-    NavigatorForceOpenMap = false,
-    TableSawIsUnGiveWoodworkXp = false,
-    TableSawIsEnableDamageHand = false,
-    TableSawPlankArrangeNeatly = true,
-    -- Mín: 5 Máx: 100 Padrão: 6
-    TableSawCreatePlankNum = 6,
-    -- Mín: 50.00 Máx: 500.00 Padrão: 80.00
-    TableSawDurable = 80.0,
-    -- Mín: 100.00 Máx: 500.00 Padrão: 100.00
-    TableSawSawBladeDurable = 100.0,
-    -- Mín: 1.00 Máx: 100.00 Padrão: 100.00
-    SawingWoodAcceleration = 100.0,
-    TableSawDivider1 = false,
-    TableSawIsEnableWeightReduction = false,
-    -- Mín: 1.00 Máx: 100.00 Padrão: 100.00
-    TableSawLogPro = 100.0,
-    -- Mín: 1.00 Máx: 100.00 Padrão: 100.00
-    TableSawLargeBranchPro = 100.0,
-    -- Mín: 1.00 Máx: 100.00 Padrão: 100.00
-    TableSawSaplingPro = 100.0,
-    -- Mín: 1.00 Máx: 100.00 Padrão: 100.00
-    TableSawPlankPro = 100.0,
-    -- Mín: 1.00 Máx: 100.00 Padrão: 100.00
-    TableSawTreeBranch2Pro = 100.0,
-    -- Mín: 1.00 Máx: 100.00 Padrão: 100.00
-    TableSawSplintersPro = 100.0,
-    -- Mín: 1.00 Máx: 100.00 Padrão: 100.00
-    TableSawTwigsPro = 100.0,
     Basement = {
         -- Com que frequência surgem porões em locais aleatórios. Padrão = Às vezes
         -- 1 = Nunca
@@ -1102,6 +1103,14 @@ SandboxVars = {
         Meditation = 1.0,
         -- Taxa em que a habilidade de Música se desenvolve. Mín: 0.00 Máx: 1000.00 Padrão: 1.00
         Music = 1.0,
+        -- XP multiplier of the Swimming skill (True Swimming), used when the global XP multiplier is disabled. Mín: 0.00 Máx: 1000.00 Padrão: 1.00
+        Swimming = 1.0,
+    },
+    SandboxOptions = {
+        EnableRightClick = false,
+        ShowAdvanced = true,
+        -- Abre automaticamente o menu de Opções do Sandbox quando o jogo é pausado.
+        EnableOpenOnPause = true,
     },
     RVAddon = {
         -- Lista de nomes de scripts separados por vírgulas (por exemplo, Base.Van,Base.StepVan,Base.VanSpiffo).
@@ -1130,9 +1139,23 @@ SandboxVars = {
         UselessZombies = true,
     },
     DAMN = {
+        AllowPowerChadSpawns = true,
+        AllowPro440Spawns = true,
+        AllowDemonChildSpawns = false,
+        AllowEV6spawns = true,
+        AllowTBCspawns = true,
+        AllowUBCspawns = true,
         AllowWreckyMcChevySpawns = true,
+        AllowShitSpawns = true,
+        AllowManlyMANSpawns = true,
+        AllowGreatScottSpawns = false,
         AllowOinkerSpawns = true,
+        AllowMrBusSpawns = true,
+        AllowChonkerSpawns = true,
+        AllowCashcowSpawns = true,
+        AllowMcBoxySpawns = true,
         AllowSuckyMcSuckfaceSpawns = true,
+        AllowBushmasterSpawns = true,
     },
     CF8KSweeper = {
         AllowTiles = true,
@@ -1145,6 +1168,265 @@ SandboxVars = {
         AllowCorpses = true,
         -- WARNING: items and corpses will be gone forever. This has enormous griefing potential so it is disabled by default.
         AllowUserAutoDelete = false,
+    },
+    SVUC = {
+        -- How long it takes to install and uninstall light armor. Mín: 10 Máx: 50 Padrão: 15
+        timeLight = 15,
+        -- How long it takes to install and uninstall heavy armor. Mín: 10 Máx: 50 Padrão: 30
+        timeHeavy = 30,
+        -- How long it takes to install and uninstall reinforced armor. Mín: 10 Máx: 50 Padrão: 45
+        timeReinforced = 45,
+        -- Mín: 10 Máx: 50 Padrão: 15
+        timeMods = 15,
+        -- How long it takes to install and uninstall wheel chains. Mín: 10 Máx: 50 Padrão: 15
+        timeWheels = 15,
+        -- The part HP has to drop below this number to be repaired. Mín: 50 Máx: 80 Padrão: 80
+        protectionHealthTriger = 80,
+        -- How much damage to deal to light armor when it repairs a part. Mín: 1 Máx: 10 Padrão: 5
+        protectionLightHealthDelta = 5,
+        -- How much damage to deal to heavy armor when it repairs a part. Mín: 1 Máx: 10 Padrão: 4
+        protectionHeavyHealthDelta = 4,
+        -- How much damage to deal to reinforced armor when it repairs a part. Mín: 1 Máx: 10 Padrão: 3
+        protectionReinforcedHealthDelta = 3,
+        -- How much damage to deal to small bullbars when they repair a part. Mín: 1 Máx: 10 Padrão: 6
+        protectionBullbarSmallHealthDelta = 6,
+        -- How much damage to deal to medium bullbars when they repair a part. Mín: 1 Máx: 10 Padrão: 5
+        protectionBullbarMediumHealthDelta = 5,
+        -- How much damage to deal to large bullbars when they repair a part. Mín: 1 Máx: 10 Padrão: 4
+        protectionBullbarLargeHealthDelta = 4,
+        -- How much damage to deal to plows when they repair a part. Mín: 1 Máx: 10 Padrão: 3
+        protectionPlowHealthDelta = 3,
+        -- How much damage to deal to wheel chains when they repair a part. Mín: 1 Máx: 10 Padrão: 1
+        protectionWheelsHealthDelta = 1,
+        -- How much horsepower to add when a small air scoop's installed. Mín: 0 Máx: 50 Padrão: 10
+        protectionEngineSmallPowerIncrease = 10,
+        -- How much horsepower to add when a medium air scoop's installed. Mín: 0 Máx: 50 Padrão: 20
+        protectionEngineMediumPowerIncrease = 20,
+        -- How much horsepower to add when a large air scoop's installed. Mín: 0 Máx: 50 Padrão: 35
+        protectionEngineLargePowerIncrease = 35,
+        -- How much horsepower to add when a piped air scoop's installed. Mín: 0 Máx: 50 Padrão: 50
+        protectionEnginePipedPowerIncrease = 50,
+        -- How much horsepower to add when a snorkel's installed. Mín: 0 Máx: 50 Padrão: 15
+        protectionEngineSnorkelPowerIncrease = 15,
+        -- Multiplier for extra gas to use when light armor's installed. Set to 0 to disable. Mín: 0 Máx: 100 Padrão: 10
+        protectionLightGasUsage = 10,
+        -- Multiplier for extra gas to use when heavy armor's installed. Set to 0 to disable. Mín: 0 Máx: 100 Padrão: 20
+        protectionHeavyGasUsage = 20,
+        -- Multiplier for extra gas to use when reinforced armor's installed. Set to 0 to disable. Mín: 0 Máx: 100 Padrão: 40
+        protectionReinforcedGasUsage = 40,
+        -- Multiplier for extra gas to use when modifications are installed. Set to 0 to disable. Mín: 0 Máx: 100 Padrão: 0
+        protectionModsGasUsage = 0,
+        -- Multiplier for extra gas to use when a small bullbar's installed. Set to 0 to disable. Mín: 0 Máx: 100 Padrão: 1
+        protectionBullbarSmallGasUsage = 1,
+        -- Multiplier for extra gas to use when a medium bullbar's installed. Set to 0 to disable. Mín: 0 Máx: 100 Padrão: 5
+        protectionBullbarMediumGasUsage = 5,
+        -- Multiplier for extra gas to use when a large bullbar's installed. Set to 0 to disable. Mín: 0 Máx: 100 Padrão: 10
+        protectionBullbarLargeGasUsage = 10,
+        -- Multiplier for extra gas to use when a plow's installed. Set to 0 to disable. Mín: 0 Máx: 100 Padrão: 20
+        protectionPlowGasUsage = 20,
+        -- Multiplier for extra gas to use when a small air scoop's installed. Set to 0 to disable. Mín: 0 Máx: 100 Padrão: 2
+        protectionEngineSmallGasUsage = 2,
+        -- Multiplier for extra gas to use when a medium air scoop's installed. Set to 0 to disable. Mín: 0 Máx: 100 Padrão: 3
+        protectionEngineMediumGasUsage = 3,
+        -- Multiplier for extra gas to use when a large air scoop's installed. Set to 0 to disable. Mín: 0 Máx: 100 Padrão: 4
+        protectionEngineLargeGasUsage = 4,
+        -- Multiplier for extra gas to use when a piped air scoop's installed. Set to 0 to disable. Mín: 0 Máx: 100 Padrão: 5
+        protectionEnginePipedGasUsage = 5,
+        -- Multiplier for extra gas to use when a snorkel's installed. Set to 0 to disable. Mín: 0 Máx: 100 Padrão: 1
+        protectionEngineSnorkelGasUsage = 1,
+    },
+    rSemiTruck = {
+        -- Multiplica a chance de spawn de todos os veículos militares W900 em cada zona.
+        -- 1.0 = padrão, 0.0 = nunca aparece, 2.0 = dobra a chance. Mín: 0.00 Máx: 10.00 Padrão: 0.50
+        MilSpawnMultiplier = 0.9,
+        -- Se ativado, os spawns fixos de veículos militares W900 são criados. Se desativado, apenas os spawns militares normais baseados em zona continuam ativos.
+        GuaranteedMilitarySpawns = true,
+        -- Controls the amount of dynamically added weapons, ammo, and gun parts in W900 military vehicle loot.
+        -- High = full amount (default), Medium = 50%, Low = 25%, None = no extra loot added. Padrão = High (Default)
+        -- 1 = None
+        -- 2 = Low (25%)
+        -- 3 = Medium (50%)
+        -- 4 = High (Default)
+        MilitaryLootLevel = 4,
+        -- If enabled, Car Trailers can spawn in both normal and fixed vehicle zones. If disabled, Car Trailers will not spawn.
+        CarTrailerSpawns = true,
+        -- If enabled, Container Trailers can spawn in both normal and fixed vehicle zones. If disabled, Container Trailers will not spawn.
+        ContainerTrailerSpawns = true,
+        -- If enabled, Containers can spawn in both normal and fixed vehicle zones. If disabled, Containers will not spawn.
+        ContainerSpawns = true,
+    },
+    MSW = {
+        -- Define quantos veículos o MultiWrecker pode transportar ao mesmo tempo.
+        -- Reduzir esta configuração só bloqueia novos carregamentos nos slots superiores; veículos já carregados ainda podem ser descarregados. Padrão = 5 veículos
+        -- 1 = 3 veículos
+        -- 2 = 4 veículos
+        -- 3 = 5 veículos
+        Slots = 3,
+    },
+    BackcountryATV = {
+        -- Volume do motor do quadriciclo (para todos os jogadores). 100 é normal, 0 é mudo, 200 é o dobro. Mín: 0 Máx: 200 Padrão: 100
+        EngineVolume = 100,
+        -- Com que frequência quadriciclos aparecem em fazendas, postos de guarda-florestal, áreas de corte de madeira e casas rurais. Só vale para áreas ainda não exploradas. Se mudar, reinicie o jogo antes de carregar o mundo. Padrão = Normal
+        -- 1 = Nenhum
+        -- 2 = Raro
+        -- 3 = Normal
+        -- 4 = Comum
+        -- 5 = Muito comum
+        SpawnRate = 3,
+        -- Marcado: quadriciclos originais novos podem aparecer nesta cor. Desmarque e nenhum aparece nela; os que já a têm ganham uma cor marcada. Deixe só Branco para o visual clássico.
+        ColorWhite = true,
+        -- Marcado: quadriciclos originais novos podem aparecer nesta cor. Desmarque e nenhum aparece nela; os que já a têm ganham uma cor marcada. Deixe só Branco para o visual clássico.
+        ColorRed = true,
+        -- Marcado: quadriciclos originais novos podem aparecer nesta cor. Desmarque e nenhum aparece nela; os que já a têm ganham uma cor marcada. Deixe só Branco para o visual clássico.
+        ColorGreen = true,
+        -- Marcado: quadriciclos originais novos podem aparecer nesta cor. Desmarque e nenhum aparece nela; os que já a têm ganham uma cor marcada. Deixe só Branco para o visual clássico.
+        ColorBlue = true,
+        -- Marcado: quadriciclos originais novos podem aparecer nesta cor. Desmarque e nenhum aparece nela; os que já a têm ganham uma cor marcada. Deixe só Branco para o visual clássico.
+        ColorBlack = true,
+        -- Marcado: quadriciclos originais novos podem aparecer nesta cor. Desmarque e nenhum aparece nela; os que já a têm ganham uma cor marcada. Deixe só Branco para o visual clássico.
+        ColorYellow = true,
+        -- Marcado: quadriciclos originais novos podem aparecer nesta cor. Desmarque e nenhum aparece nela; os que já a têm ganham uma cor marcada. Deixe só Branco para o visual clássico.
+        ColorCamo = true,
+        -- Marcado: quadriciclos originais novos podem aparecer nesta cor. Desmarque e nenhum aparece nela; os que já a têm ganham uma cor marcada. Deixe só Branco para o visual clássico.
+        ColorPink = true,
+    },
+    BackcountryATVPack = {
+        -- Volume do motor do quadriciclo (para todos os jogadores). 100 é normal, 0 é mudo, 200 é o dobro. Mín: 0 Máx: 200 Padrão: 100
+        EngineVolume = 100,
+        -- Com que frequência os quadriciclos e as motos aparecem em fazendas, postos de guarda florestal, áreas de extração de madeira, casas rurais e estacionamentos da polícia. Cada veículo abaixo também tem sua própria frequência, multiplicada por esta. Só afeta áreas ainda não exploradas. Se mudar, reinicie o jogo antes de carregar o mundo. Padrão = Normal
+        -- 1 = Nenhum
+        -- 2 = Raro
+        -- 3 = Normal
+        -- 4 = Comum
+        -- 5 = Muito comum
+        SpawnRate = 3,
+        -- Com que frequência este veículo aparece, além da frequência geral. Desligado o remove do mundo. Padrão = Normal
+        -- 1 = Nenhum
+        -- 2 = Raro
+        -- 3 = Normal
+        -- 4 = Comum
+        -- 5 = Muito comum
+        SpawnHeavy = 3,
+        -- Com que frequência este veículo aparece, além da frequência geral. Desligado o remove do mundo. Padrão = Normal
+        -- 1 = Nenhum
+        -- 2 = Raro
+        -- 3 = Normal
+        -- 4 = Comum
+        -- 5 = Muito comum
+        SpawnQuadzilla = 3,
+        -- Com que frequência este veículo aparece, além da frequência geral. Desligado o remove do mundo. Padrão = Normal
+        -- 1 = Nenhum
+        -- 2 = Raro
+        -- 3 = Normal
+        -- 4 = Comum
+        -- 5 = Muito comum
+        SpawnRaptor = 3,
+        -- Com que frequência este veículo aparece, além da frequência geral. Desligado o remove do mundo. Padrão = Normal
+        -- 1 = Nenhum
+        -- 2 = Raro
+        -- 3 = Normal
+        -- 4 = Comum
+        -- 5 = Muito comum
+        SpawnCRF450 = 3,
+        -- Com que frequência este veículo aparece, além da frequência geral. Desligado o remove do mundo. Padrão = Normal
+        -- 1 = Nenhum
+        -- 2 = Raro
+        -- 3 = Normal
+        -- 4 = Comum
+        -- 5 = Muito comum
+        SpawnNXR = 3,
+        -- Com que frequência este veículo aparece, além da frequência geral. Desligado o remove do mundo. Padrão = Normal
+        -- 1 = Nenhum
+        -- 2 = Raro
+        -- 3 = Normal
+        -- 4 = Comum
+        -- 5 = Muito comum
+        SpawnRoadKing = 3,
+        -- Com que frequência este veículo aparece, além da frequência geral. Desligado o remove do mundo. Padrão = Normal
+        -- 1 = Nenhum
+        -- 2 = Raro
+        -- 3 = Normal
+        -- 4 = Comum
+        -- 5 = Muito comum
+        SpawnPolice = 3,
+        -- As motos de estrada e trilha e os quadriciclos esportivos também aparecem, raramente, em estacionamentos da cidade.
+        SpawnInTowns = false,
+        -- Permite colocar de volta sobre as rodas um veículo capotado pelo menu do botão direito.
+        FlipQuad = true,
+    },
+    SuperBulldozerOptions = {
+        -- Controls how often Super Bulldozers spawn in the world. 0 = No spawns, 1.0 = Default, 10.0 = Maximum. Higher values increase spawn chance. Mín: 0.00 Máx: 99.00 Padrão: 2.00
+        SpawnRate = 2.0,
+        -- Allow the bulldozer to use Standard Mode with normal loot drops.
+        AllowStandardMode = true,
+        -- Allow the bulldozer to use the no-loot version of Standard Mode.
+        AllowStandardNoLootMode = true,
+        -- Allow the bulldozer to replace cleared ground with gravel.
+        AllowGravelMode = true,
+        -- Allow the bulldozer to use the most destructive terrain-clearing mode.
+        AllowExtremeMode = true,
+        -- Allow the bulldozer to clear only foliage, trees, and similar natural obstacles.
+        AllowFoliageMode = true,
+        -- Allow the bulldozer to kill zombies without damaging the environment.
+        AllowZombieOnlyMode = true,
+    },
+    Cessna172 = {
+        -- Ground speed the Cessna needs before it lifts off. Lower takes off sooner and flies slower before it stalls. Default 45. Mín: 30 Máx: 80 Padrão: 45
+        TakeoffSpeed = 45,
+        -- How long the engine keeps running with nobody in the pilot's seat before it switches itself off. 0 switches it off straight away. -1 never switches it off. Default 60. Mín: -1 Máx: 3600 Padrão: 60
+        EngineAutoOff = 60,
+    },
+    AMGeneralTankerFunctionality = {
+        -- Multiplicador da velocidade de transferência da bomba do caminhão-tanque. 1 é a velocidade padrão. Mín: 1 Máx: 20 Padrão: 5
+        PumpSpeedMultiplier = 5,
+        -- Capacidade em litros do tanque de carga de combustível do M49A2C. Aplica-se aos veículos carregados recentemente. Mín: 500 Máx: 6000 Padrão: 850
+        M49A2CCargoTankCapacity = 850,
+        -- Capacidade em litros do tanque de carga de água do M50A3. Aplica-se aos veículos carregados recentemente. Mín: 500 Máx: 6000 Padrão: 850
+        M50A3CargoTankCapacity = 850,
+        -- Capacidade em litros do tanque de carga de combustível do M967. Aplica-se aos veículos carregados recentemente. Mín: 1000 Máx: 10000 Padrão: 2000
+        M967CargoTankCapacity = 2000,
+    },
+    RailroaderExtendedFunction = {
+        -- ON (default in Apocalypse, Outbreak, Rising, Extinction and SP Sandbox): enables tow, auto refuel, spawns and REF Custom. Each option can be ticked and applies in-game. OFF: Custom options turn off. Exclusive with Multiplayer.
+        RefMode = false,
+        -- ON: turns OFF REF Mode and REF sim hooks. Locomotives pass through / Realistic locomotive stay editable. Host defaults to this profile. OFF (SP Sandbox): restores REF Mode.
+        Multiplayer = true,
+        -- Couple a write-off locomotive to a working one and tow it.
+        AllowTow = false,
+        -- Refuel from a map tank keeps filling while you stay nearby. OFF: Railroader progress bar.
+        DepotAuto = false,
+        -- Extra locomotives at Louisville, Ekron and Brandenburg.
+        ExtraSpawns = false,
+        -- OFF: locomotives stop and take damage on contact. ON: pass through (several players on the same track).
+        LocoCollide = false,
+        -- If the locomotive derails, it never works again. No drag hook craft or re-rail.
+        RealisticLoco = false,
+        -- ON: 1 L in the can = 1 on the gauge. OFF: Railroader (1 L = 3 on the gauge).
+        DieselRealLitres = false,
+        -- Cap ~10 km/h per Run notch. Dedicated clients skip this (no judder).
+        AllowNotchSpeed = false,
+        -- ON: BES system enabled. OFF: disabled.
+        AllowBes = false,
+        -- Diesel will not start without the locomotive key.
+        RequireIgnitionKey = false,
+        -- ON: reinforcement soaks first, then REF engine chip. OFF: engine condition follows Railroader.
+        RefCollisionWear = false,
+        -- ON: climb the ladder, walk the side grate, enter the cab. OFF: direct [E] board/dismount (Railroader).
+        WalkwayImmersive = false,
+        -- ON: panic when first driving, derailing, crashing or leaving a rolling train. OFF: no train panic.
+        LocoPanic = false,
+        -- 60/80 km/h caps, railero fuel bonus, skill bonuses on Drive.C. OFF: Railroader defaults.
+        AllowSkillLineSpeed = false,
+        -- Rolling loco with no players nearby parks; death in cab ejects beside the hull.
+        LocoAbandon = false,
+        -- Players in front of a rolling loco are pushed to the sides.
+        PlayerShoveSide = false,
+        -- Mechanics panel, re-rail, jack, engine and armor repair. OFF: Railroader only.
+        AllowMechanics = false,
+    },
+    ProjectCook = {
+        -- Permite que o Project Cook use alimentos congelados em Culinária básica e Cozinhando com Receitas, mesmo quando a receita do jogo base exige ingredientes descongelados. Desativado por padrão. Afeta apenas o Project Cook.
+        AllowFrozenCooking = true,
     },
     SpawnSelector = {
         -- Impede que um jogador use Spawn Selector para retornar perto de onde seu personagem anterior morreu, tornando mais difícil recuperar imediatamente o equipamento perdido com um novo personagem.
@@ -1176,33 +1458,83 @@ SandboxVars = {
         -- Exibe os pontos de interesse marcados no mapa de seleção do local de surgimento. Desmarque para ocultar dos jogadores o botão e todos os marcadores.
         ShowPOIs = true,
     },
-    rSemiTruck = {
-        -- Multiplica a chance de spawn de todos os veículos militares W900 em cada zona.
-        -- 1.0 = padrão, 0.0 = nunca aparece, 2.0 = dobra a chance. Mín: 0.00 Máx: 10.00 Padrão: 0.50
-        MilSpawnMultiplier = 0.9,
-        -- Se ativado, os spawns fixos de veículos militares W900 são criados. Se desativado, apenas os spawns militares normais baseados em zona continuam ativos.
-        GuaranteedMilitarySpawns = true,
-        -- Controls the amount of dynamically added weapons, ammo, and gun parts in W900 military vehicle loot.
-        -- High = full amount (default), Medium = 50%, Low = 25%, None = no extra loot added. Padrão = High (Default)
-        -- 1 = None
-        -- 2 = Low (25%)
-        -- 3 = Medium (50%)
-        -- 4 = High (Default)
-        MilitaryLootLevel = 4,
-        -- If enabled, Car Trailers can spawn in both normal and fixed vehicle zones. If disabled, Car Trailers will not spawn.
-        CarTrailerSpawns = true,
-        -- If enabled, Container Trailers can spawn in both normal and fixed vehicle zones. If disabled, Container Trailers will not spawn.
-        ContainerTrailerSpawns = true,
-        -- If enabled, Containers can spawn in both normal and fixed vehicle zones. If disabled, Containers will not spawn.
-        ContainerSpawns = true,
+    AegisEvents = {
+        -- Quantas ondas de horda o cerco envia. Mín: 1 Máx: 10 Padrão: 3
+        SiegeWaves = 3,
+        -- Tamanho de cada onda individual. Mín: 5 Máx: 200 Padrão: 40
+        SiegeCount = 40,
+        -- Distância da primeira onda em blocos. Valores muito altos ficam fora da área carregada, nada é gerado ali. Mín: 20 Máx: 150 Padrão: 60
+        SiegeDistance = 60,
+        -- Blocos adicionais de distância a cada nova onda. Mín: 0 Máx: 50 Padrão: 12
+        SiegeGap = 12,
+        -- Dispersão dos zumbis ao redor do ponto de início da onda. Mín: 4 Máx: 30 Padrão: 10
+        SiegeRadius = 10,
+        -- Minutos que a isca sonora continua pulsando no local de ativação. A horda caminha até lá, não atrás do admin. Mín: 1 Máx: 30 Padrão: 5
+        SiegeLureMinutes = 5,
+        -- As ondas são compostas por corredores.
+        SiegeSprinters = false,
+        -- As ondas são compostas por rastejantes (corredores têm prioridade).
+        SiegeCrawlers = false,
+        -- Um tiro audível marca o início.
+        SiegeGunshot = true,
+        -- Duração da tempestade acionada em horas. Mín: 1 Máx: 96 Padrão: 8
+        StormHours = 8,
+        -- Número de raios na salva, 0 desativa. Mín: 0 Máx: 20 Padrão: 6
+        StormThunder = 6,
+        -- Segundos entre dois raios. Mín: 0.50 Máx: 10.00 Padrão: 1.20
+        StormThunderGap = 1.2,
+        -- Tamanho da horda que se aproxima, 0 mantém apenas o helicóptero. Mín: 0 Máx: 200 Padrão: 15
+        HeliCount = 15,
+        -- Distância da horda que se aproxima, em blocos. Mín: 20 Máx: 150 Padrão: 80
+        HeliDistance = 80,
+        -- Dispersão dos zumbis ao redor do ponto inicial. Mín: 4 Máx: 30 Padrão: 8
+        HeliRadius = 8,
+        -- Número de zumbis que caem do céu. Mín: 1 Máx: 100 Padrão: 20
+        AirdropCount = 20,
+        -- Dispersão dos zumbis ao redor da sua posição. Mín: 2 Máx: 30 Padrão: 10
+        AirdropRadius = 10,
+        -- Altura em níveis de onde os zumbis caem. Mín: 1 Máx: 8 Padrão: 5
+        AirdropHeight = 5,
+        -- Duração da tempestade desencadeada em horas. Mín: 1 Máx: 48 Padrão: 6
+        FirestormHours = 6,
+        -- Número de trovões na salva, 0 a desativa. Mín: 0 Máx: 20 Padrão: 4
+        FirestormThunder = 4,
+        -- Número de grupos em chamas, cada um de sua própria direção. Mín: 1 Máx: 6 Padrão: 3
+        FirestormWaves = 3,
+        -- Tamanho de cada grupo em chamas. Mín: 1 Máx: 100 Padrão: 15
+        FirestormCount = 15,
+        -- Distância dos grupos em chamas em blocos. Mín: 20 Máx: 150 Padrão: 50
+        FirestormDistance = 50,
+        -- A chuva começa quando a emboscada é acionada.
+        AmbushRain = true,
+        -- Número de rastejantes que aparecem ao seu redor. Mín: 1 Máx: 100 Padrão: 25
+        AmbushCount = 25,
+        -- Dispersão dos rastejantes ao redor da sua posição. Mín: 2 Máx: 20 Padrão: 6
+        AmbushRadius = 6,
+        -- Desligado: ninguém recebe o painel azul do jogador, nem os admins. O painel dourado de admin fica intacto.
+        PlayerPanel = true,
+        -- Permite que jogadores reivindiquem uma zona no próprio abrigo dentro do orçamento do cargo. Desligado bloqueia toda reivindicação.
+        PlayerClaims = true,
+        -- A página de kits da area do jogador, incluindo resgate de booster. Desligado a esconde para todos; o editor de kits continua funcionando.
+        PlayerKits = true,
+        -- Oferece "Impulsionador do Discord" e "Somente com código de kit" ao editar um kit. Ambos exigem um bot próprio do Discord. Desligado, some da lista. Um kit que já usa um deles mantém.
+        KitCodeGates = true,
+        -- Quantos veículos um jogador pode manter na página de veículos da área do jogador. 0 desativa. Ignorado onde o Knox Claim roda, aquele mod traz seu próprio limite. Veículos já salvos nunca são perdidos ao reduzir o valor. Mín: 0 Máx: 20 Padrão: 5
+        PlayerVehicles = 5,
+        -- Se a página de saúde da área do jogador diz abertamente se um jogador realmente carrega a infecção zumbi. O vanilla deixa isso incerto de propósito, desative para manter o suspense. A infecção de ferimento e outras lesões continuam sendo mostradas de qualquer forma.
+        PlayerHealthInfection = true,
+        -- Se mortes causadas, mortes sofridas, distância e melhor vida são registradas para personagens atualmente em nível de acesso admin. Ativado por padrão, desative para que os testes de admin não distorçam os números.
+        PlayerStatsForAdmins = true,
+        -- Se o modo deus, invisibilidade e noclip se ativam sozinhos assim que um personagem recebe um nível de acesso admin (comportamento vanilla). Desative para que permaneçam desligados até você ativá-los. A cura completa e o reset de fome/sede que vêm junto com a mesma promoção não podem ser evitados, isso vem do próprio motor do jogo.
+        PlayerAutoAdminPowers = true,
     },
-    MSW = {
-        -- Define quantos veículos o MultiWrecker pode transportar ao mesmo tempo.
-        -- Reduzir esta configuração só bloqueia novos carregamentos nos slots superiores; veículos já carregados ainda podem ser descarregados. Padrão = 5 veículos
-        -- 1 = 3 veículos
-        -- 2 = 4 veículos
-        -- 3 = 5 veículos
-        Slots = 3,
+    AutoTailoring = {
+        -- Train Tailoring is only offered while your Tailoring level is below this value. <LINE> Raise it if you use a mod that extends skill levels beyond 10. Mín: 0 Máx: 100000 Padrão: 10
+        MaxLevel = 10,
+    },
+    AutoMechanics = {
+        -- Accepted risk percentage of losing part condition. <LINE> 0 (recommended for public servers) will protect your vehicles parts conditions. <LINE> 100 let players do whatever they want (recommended for private servers). <LINE> Only active on multiplayer clients or solo users with Verbose on. Mín: 0 Máx: 100 Padrão: 100
+        ConditionLossPercentageThreshold = 0,
     },
     AreaTasks = {
         -- Choose how Barricade Planks works on each selected window side. One Plank Per Window adds one plank per run. Fully Plank Windows adds planks until each selected side has four. Both applies the behavior to both sides. Existing metal barricades are skipped. Requires available materials and tools. Padrão = Fully Plank Windows
@@ -1230,31 +1562,11 @@ SandboxVars = {
         -- Maximum tile distance from the player when choosing a container/vehicle source or a task destination. Default: 50. Allowed range: 1 to 100. Mín: 1 Máx: 100 Padrão: 50
         MaximumDestinationDistance = 50,
     },
-    AutoMechanics = {
-        -- Accepted risk percentage of losing part condition. <LINE> 0 (recommended for public servers) will protect your vehicles parts conditions. <LINE> 100 let players do whatever they want (recommended for private servers). <LINE> Only active on multiplayer clients or solo users with Verbose on. Mín: 0 Máx: 100 Padrão: 100
-        ConditionLossPercentageThreshold = 0,
-    },
-    AutoTailoring = {
-        -- Train Tailoring is only offered while your Tailoring level is below this value. <LINE> Raise it if you use a mod that extends skill levels beyond 10. Mín: 0 Máx: 100000 Padrão: 10
-        MaxLevel = 10,
-    },
-    BaseOrganizer = {
-        -- Ativa ou desativa o mod neste mundo.
-        Enabled = true,
-        -- Distância máxima, em quadrados, usada pelo botão Organizar. Mín: 1 Máx: 5 Padrão: 2
-        NearbyRange = 3,
-        -- Tempo entre ciclos automáticos de conferência de containers carregados. Mín: 5 Máx: 300 Padrão: 30
-        ScanIntervalSeconds = 30,
-        -- Quantidade de containers conferidos por etapa. Valores menores reduzem picos em bases grandes. Mín: 1 Máx: 10 Padrão: 2
-        ScanBatchSize = 2,
-        -- Permite alterar nome e regras pelo catálogo mesmo longe do container.
-        AllowRemoteEditing = true,
-        -- No multiplayer, permite que jogadores comuns cadastrem, alterem e removam regras. Desativado: somente níveis administrativos.
-        AllowPlayerConfiguration = true,
-        -- Remove automaticamente registros que permaneceram ausentes além do prazo definido.
-        AutoCleanupMissing = false,
-        -- Dias de jogo que um container removido/destruído permanece registrado antes de poder ser limpo automaticamente. Mín: 1 Máx: 365 Padrão: 30
-        MissingRetentionDays = 30,
+    BasementFallSafety = {
+        -- Keep this on so you get a tooltip when this mod saves your playthrough and rate it up if it does. Also useful for reporting any false activation (one not connected to basement stairs) if you ever happen to see one.
+        showActivationMessage = true,
+        -- Writes detailed Clip Fix activation, rollback, verification, failure, and nearby fall-damage information to console.txt. Default: Off.
+        diagnosticLogging = false,
     },
     DestroyBoulder = {
         -- When disabled, hides and blocks the crafting recipes added by Break Big Rocks, prevents its vanilla forge-recipe patches, and stops automatic Blacksmithing recipe unlocks. Enabled by default.
@@ -1427,20 +1739,6 @@ SandboxVars = {
         Base_Muscle_Strain = 4.0,
         Debug_Logging = false,
     },
-    BetterItemInfo = {
-        -- Allow players to see additional food spoilage estimates.
-        EnableSpoilageInfo = true,
-        -- Allow players to see additional food and liquid nutrition information.
-        EnableNutritionInfo = true,
-        -- Allow players to see additional weapon statistics.
-        EnableWeaponStats = true,
-        -- Require Cooking levels for food spoilage estimates and additional food and liquid nutrition information.
-        FoodLevelRequirement = true,
-        -- Require the relevant weapon skill levels for additional melee and firearm statistics.
-        WeaponLevelRequirement = true,
-        -- If Maintenance levels are required to see extra weapon and item condition information.
-        MaintenanceLevelRequirement = true,
-    },
     EZRoof = {
         -- When enabled, placing ceilings requires a chair or stool as temporary scaffold.
         RequireScaffold = true,
@@ -1503,17 +1801,9 @@ SandboxVars = {
         -- Mantenha mochilas e bolsas equipadas durante exercícios
         KeepBagsOn = false,
     },
-    KillCount = {
-        -- May provoke stutters.
-        doExport = false,
-        -- Includes all kills into the final value in Post Death floating text.
-        includePostDeathUI = true,
-        -- Target time (in milliseconds) between two updates in multiplayer. Small value gives reactivity. High value reduces network use and server workload. Mín: 0 Máx: 10000000 Padrão: 500
-        MaxUpdateDelay = 500,
-        -- Each client can see every character score. Deactivate on (very large) servers to reduce Global Mod Data transfer load.
-        shareOnServer = true,
-        -- Dead characters are kept and count toward server kills. Deactivate for server that never wipe.
-        keepTrackOfDead = true,
+    GoMAttachmentWorkbench = {
+        -- Show parts in your inventory and carried bags. Installed and queued parts remain visible. Parts found only in nearby storage or on the ground are hidden. Disabled: show all compatible parts.
+        ShowOnlyOwnedParts = false,
     },
     LTPMS = {
         -- Mín: 0.00 Máx: 1.00 Padrão: 0.90
@@ -1522,6 +1812,87 @@ SandboxVars = {
         ThresholdTwo = 0.5,
         Ubiquity = 1,
         Whitelist = "",
+    },
+    LayeredPlacement = {
+        -- Allow players to stack posters and wall decor on the same wall and place ceiling lights over furniture. Floor furniture remains unchanged.
+        LayeredPlace = true,
+        -- Allow players to place and pick up hanging lights and other high decor on railings, posts, catwalk edges, and other locations without a solid wall or floor.
+        FloatingPlace = true,
+        -- Allow players upstairs to aim Place and Pickup at their current floor when the cursor falls through a grated floor to the level below.
+        MeshFloorAim = true,
+        -- Allow Place and Pickup to finish when a player is already near a catwalk or railing tile but normal pathing cannot reach it.
+        CatwalkReach = true,
+    },
+    LGExtendedPlumbing = {
+        -- Um coletor de chuva encanado num edifício alimenta todas as torneiras que ele tiver, não só a que fica logo abaixo. Desligue isto para ter encanamento normal.
+        Enabled = true,
+        -- Até onde uma torneira procura barris quando não está num edifício de verdade, como uma base que você mesmo construiu. Dentro de um edifício de verdade usa-se o edifício inteiro e isto não faz nada. 12 cobre uma base de bom tamanho. Mín: 1 Máx: 64 Padrão: 12
+        Reach = 12,
+        -- Coisas que podem ser encanadas para serem CHEIAS pelo abastecimento em vez de alimentá-lo. Bebedouros por padrão. Mesmo assim você tem de clicar com o botão direito e encanar com uma chave grifo. Use o nome de script do objeto, separado por ponto e vírgula. Limpe o campo para desligar isto.
+        FedFixtures = "WaterDispenser",
+        -- Corrige dois bugs do jogo base em servidores: uma máquina de lavar que você não consegue encanar, e outra que continua rodando na sua tela depois de ficar sem água. Um jogador não precisa disto.
+        WasherPatch = true,
+        -- Corrige um bug do jogo base que esvazia os seus barris sem encher nada. Só afeta bebidas como refrigerante de cola, suco e vodka. Água, cerveja e uísque nunca foram afetados.
+        FluidPatch = true,
+        -- Escreve toda mudança de encanamento no arquivo de log. Só serve para achar um problema.
+        Debug = false,
+    },
+    TrueSmoking = {
+        -- TÜM tütün ürünlerinin genel yanma hızı
+        -- 25 = hiç bitmez · 100 = dengeli · 200 = çok hızlı biter Mín: 0.10 Máx: 3.00 Padrão: 1.00
+        SmokingSpeed = 1.0,
+        -- Her nefeste alınan nikotin vuruşu ve stres/can sıkıntısı azaltma gücü
+        -- 50 = zayıf · 100 = normal · 200 = çok güçlü Mín: 0.00 Máx: 3.00 Padrão: 1.00
+        PuffStrength = 1.0,
+        -- Yürürken, koşarken veya sprint atarken ne kadar hızlı yanar
+        -- 25 = neredeyse yanmaz · 100 = normal · 200 = hareketle çok hızlı yanar Mín: 0.00 Máx: 3.00 Padrão: 1.00
+        MovementBurn = 1.0,
+        -- Hareketsiz dururken sigaranın sönme hızı
+        -- 0 = asla sönmez (her zaman yanık kalır)
+        -- 100 = normal sönme (yeniden yakmak gerekir) Mín: 0.00 Máx: 3.00 Padrão: 1.00
+        IdleBurnOut = 1.0,
+        -- Multiplies all effects from smoking (nicotine, stress relief, boredom relief, etc.)
+        -- 50 = half effects · 100 = normal · 200 = double effects Mín: 0.10 Máx: 3.00 Padrão: 1.00
+        EffectMultiplier = 1.0,
+        -- How much smoking reduces hunger
+        -- 0 = no hunger reduction · 0.25 = subtle (default) · 1.0 = vanilla strength · 2.0 = double Mín: 0.00 Máx: 2.00 Padrão: 0.25
+        HungerReduction = 0.25,
+        -- How much smoking reduces fatigue
+        -- 0 = no fatigue reduction · 0.25 = subtle (default) · 1.0 = vanilla strength · 2.0 = double Mín: 0.00 Máx: 2.00 Padrão: 0.25
+        FatigueReduction = 0.25,
+        -- Sigara içerken şemag, gaz maskesi vb. otomatik çıkarılır, bitince geri takılır
+        ManageHeadGear = true,
+        -- Köz zayıfladığında tamamen sönmeden tekrar yakılabilir
+        SmokeRelighting = true,
+        -- Nikotin seviyesi ve yoksunluğu daha iyi gösteren yeni mood ikonunu etkinleştir
+        UseNewMoodle = true,
+        -- Nefes çekerken öksürme şansı
+        Coughing = true,
+        -- Sigara İçen özelliği varsa nefes başına öksürme şansı (%) Mín: 0 Máx: 100 Padrão: 4
+        CoughingChanceSmoker = 4,
+        -- Sigara İçen özelliği yoksa nefes başına öksürme şansı (%) Mín: 0 Máx: 100 Padrão: 15
+        CoughingChanceNonSmoker = 15,
+        -- Düşerken, tırmanırken veya zombi çarptığında yanan sigarayı düşürme şansı
+        Dropping = true,
+        -- Sigara İçen özelliği varsa düşürme şansı (%) Mín: 0 Máx: 100 Padrão: 6
+        DropChanceSmoker = 6,
+        -- Sigara İçen özelliği yoksa düşürme şansı (%) (çok sakar!) Mín: 0 Máx: 100 Padrão: 35
+        DropChanceNonSmoker = 35,
+        -- Nikotin takibi, yoksunluk etkileri ve dinamik bağımlılık sistemini açar
+        UseNicotineSystem = true,
+        -- Sigara içme alışkanlığına göre özellik otomatik kazanılır/kaybedilir
+        DynamicSmokerTrait = true,
+        -- Yoğun sigara içtikten kaç oyun günü sonra Sigara İçen özelliği alınır Mín: 1 Máx: 60 Padrão: 10
+        DaysToAddiction = 10,
+        -- Hiç içmeyince kaç oyun günü sonra Sigara İçen özelliği kaybolur Mín: 3 Máx: 90 Padrão: 30
+        DaysToDetox = 30,
+        -- Sigarayı bıraktıktan kaç gün sonra yoksunluk semptomları en kötü olur Mín: 1 Máx: 7 Padrão: 2
+        DaysToPeakWithdrawal = 2,
+        -- Sigara İçen özelliği varken bağımlılık ve yoksunluk ne kadar hızlı azalır
+        -- Yüksek = daha hızlı azalır Mín: 0.10 Máx: 1.00 Padrão: 0.80
+        SmokerTraitDecayMultiplier = 0.8,
+        -- Enable debug logging and debug UI panel (for mod developers and troubleshooting)
+        DebugMode = false,
     },
     Text = {
         -- Habilita/Desabilita todas as mecânicas relacionadas à Música (moodles, traços, interações, ...).
@@ -1775,20 +2146,6 @@ SandboxVars = {
         -- Logs mais verbosos. Apenas para depuração.
         LSVerbose = false,
     },
-    LGExtendedPlumbing = {
-        -- Um coletor de chuva encanado num edifício alimenta todas as torneiras que ele tiver, não só a que fica logo abaixo. Desligue isto para ter encanamento normal.
-        Enabled = true,
-        -- Até onde uma torneira procura barris quando não está num edifício de verdade, como uma base que você mesmo construiu. Dentro de um edifício de verdade usa-se o edifício inteiro e isto não faz nada. 12 cobre uma base de bom tamanho. Mín: 1 Máx: 64 Padrão: 12
-        Reach = 12,
-        -- Coisas que podem ser encanadas para serem CHEIAS pelo abastecimento em vez de alimentá-lo. Bebedouros por padrão. Mesmo assim você tem de clicar com o botão direito e encanar com uma chave grifo. Use o nome de script do objeto, separado por ponto e vírgula. Limpe o campo para desligar isto.
-        FedFixtures = "WaterDispenser",
-        -- Corrige dois bugs do jogo base em servidores: uma máquina de lavar que você não consegue encanar, e outra que continua rodando na sua tela depois de ficar sem água. Um jogador não precisa disto.
-        WasherPatch = true,
-        -- Corrige um bug do jogo base que esvazia os seus barris sem encher nada. Só afeta bebidas como refrigerante de cola, suco e vodka. Água, cerveja e uísque nunca foram afetados.
-        FluidPatch = true,
-        -- Escreve toda mudança de encanamento no arquivo de log. Só serve para achar um problema.
-        Debug = false,
-    },
     MinidoracatUI = {
         -- Imagem na alça da barra da família de mods, o botão que recolhe e expande a barra. Todos os jogadores deste servidor veem a mesma.
         -- Mascote: a garota-gato do Minidoracat, que dorme enquanto a barra está recolhida.
@@ -1977,6 +2334,109 @@ SandboxVars = {
         -- As mudanças do admin valem logo após Aplicar.
         ExportOfflinePlayers = true,
     },
+    MinidoracatAutoDrive = {
+        -- Quando ativado, o jogador precisa carregar um Navegador GPS com carga, ou o veículo precisa ter um Navegador GPS instalado e uma bateria com carga, antes de traçar uma rota. Com o mod Map Watch instalado, usar um Map Watch ligado com um Módulo de Posicionamento também conta.
+        -- Desativado (padrão): qualquer um pode traçar uma rota a qualquer momento.
+        -- Entra em vigor assim que um administrador clica em Aplicar.
+        NeedItemForNav = false,
+        -- Quando ativado (padrão), o veículo precisa ter um Módulo de Piloto Automático instalado para iniciar a direção automática.
+        -- Desativado: qualquer veículo pode dirigir sozinho, bom para testes ou partidas casuais.
+        -- Entra em vigor assim que um administrador clica em Aplicar.
+        NeedItemForAutoDrive = true,
+        -- Permite que os jogadores fabriquem o Navegador GPS com a receita de elétrica (requer Elétrica 3).
+        -- Quando desativado, a receita não pode ser feita. O saque do mundo e o fornecimento por administradores são controlados à parte; itens existentes não são afetados.
+        -- Entra em vigor assim que um administrador clica em Aplicar.
+        AllowCraftGPS = true,
+        -- Permite que os jogadores fabriquem o Módulo de Piloto Automático com a receita de elétrica (requer Elétrica 6).
+        -- Quando desativado, a receita não pode ser feita. O saque do mundo e o fornecimento por administradores são controlados à parte; itens existentes não são afetados.
+        -- Entra em vigor assim que um administrador clica em Aplicar.
+        AllowCraftAutopilot = true,
+        -- Ativado (padrão): adiciona Navegadores GPS ao saque de depósitos de eletrônicos do exército, estoque diverso de lojas de eletrônicos, ferramentas de engenheiro e caixas de eletrônicos.
+        -- Desativado: impede novo saque de GPS. Itens existentes e recipientes que já geraram conteúdo não são removidos.
+        -- Depois que um administrador clica em Aplicar, recipientes cujo conteúdo ainda não foi gerado usam a nova configuração imediatamente.
+        SpawnGPS = true,
+        -- Ativado (padrão): adiciona Módulos de Piloto Automático ao saque de depósitos de eletrônicos do exército, componentes de fábricas de rádio e estoque de computadores de lojas de eletrônicos.
+        -- Desativado: impede novo saque de módulos. Itens existentes e recipientes que já geraram conteúdo não são removidos.
+        -- Depois que um administrador clica em Aplicar, recipientes cujo conteúdo ainda não foi gerado usam a nova configuração imediatamente.
+        SpawnAutopilot = true,
+        -- Ajusta apenas a energia usada pela navegação GPS ativa. O padrão 50 é metade da taxa base; 100 é a taxa base, 200 é o dobro e 0 desativa esse consumo.
+        -- Um GPS instalado usa a bateria do veículo; um GPS portátil usa a própria bateria. Com o motor ligado, o alternador original carrega ao mesmo tempo; em toda a faixa 0–500 a bateria continua ganhando carga líquida, e o multiplicador só muda a velocidade de recarga.
+        -- As cargas de energia do GPS e da direção automática se somam quando ambos estão ativos.
+        -- Entra em vigor assim que um administrador clica em Aplicar. Mín: 0 Máx: 500 Padrão: 50
+        GPSPowerPercent = 50,
+        -- Ajusta apenas a carga na bateria do veículo enquanto a direção automática está ativa. O padrão 50 é metade da taxa base; 100 é a taxa base, 200 é o dobro e 0 desativa esse consumo.
+        -- A direção automática exige o motor ligado, então o alternador original carrega ao mesmo tempo; em toda a faixa 0–500 a bateria continua ganhando carga líquida, e o multiplicador só muda a velocidade de recarga. Essa carga é somada à do GPS.
+        -- Entra em vigor assim que um administrador clica em Aplicar. Mín: 0 Máx: 500 Padrão: 50
+        AutoDrivePowerPercent = 50,
+        -- Adiciona consumo de combustível enquanto o motorista navega com um GPS instalado ou com um GPS portátil carregado. O padrão 50 adiciona 2,5% ao consumo original desse veículo; 100 adiciona 5%, 200 adiciona 10% e 0 não adiciona nada.
+        -- Um GPS portátil continua gastando a própria bateria; os extras de combustível do GPS e da direção automática se somam quando ambos estão ativos.
+        -- Entra em vigor assim que um administrador clica em Aplicar. Mín: 0 Máx: 500 Padrão: 50
+        GPSFuelPercent = 50,
+        -- Adiciona consumo de combustível apenas enquanto a direção automática está ativa. O padrão 50 adiciona 12,5% ao consumo original desse veículo; 100 adiciona 25%, 200 adiciona 50% e 0 não adiciona nada.
+        -- Com GPS e direção automática ativos no padrão, o extra total é 15%; o consumo original não é descontado duas vezes.
+        -- Durante a direção automática, o consumo original é calculado na marcha que você usaria nessa velocidade dirigindo, então reduzir antes de curvas e obstáculos não gasta combustível a mais.
+        -- Entra em vigor assim que um administrador clica em Aplicar. Mín: 0 Máx: 500 Padrão: 50
+        AutoDriveFuelPercent = 50,
+        -- Quando ativado (padrão), instalar ou remover um Navegador GPS ou Módulo de Piloto Automático de um veículo requer Elétrica 1.
+        -- Uma chave de fenda e uma bateria de veículo são sempre necessárias, independentemente desta opção.
+        -- Desativado: qualquer um pode instalar e remover os dispositivos.
+        -- Entra em vigor assim que um administrador clica em Aplicar.
+        InstallSkillGate = true,
+        -- Velocidade máxima permitida durante a direção automática.
+        -- Valores menores são mais seguros e batem menos em obstáculos; valores maiores são mais rápidos, porém mais arriscados.
+        -- A velocidade real continua limitada pelas condições da estrada, pelo desempenho do veículo e pela redução nas curvas.
+        -- Depois que um administrador clica em Aplicar, reinicie a direção automática para usar o novo limite. Mín: 5 Máx: 120 Padrão: 120
+        AutoDriveMaxSpeed = 120,
+        -- Alcance de detecção: zumbis individuais de 2 a 48 metros à frente (110 metros com configurações de alta velocidade) e a até 3 metros de cada lado da linha de direção.
+        -- Quando ativado, zumbis que o veículo não consegue evitar (sem espaço, passagem bloqueada por um obstáculo ou com “Desviar de zumbis e cadáveres” desligado) limitam a velocidade pela quantidade: 1–3 a 35, 4–7 a 25, 8 ou mais a 15 km/h; zumbis que ele consegue evitar não causam redução. Zumbis não são obstáculos, então a direção automática não para por eles.
+        -- Forçar redução aplica isso a todos; Escolha do jogador (padrão) deixa cada jogador usar o HUD/as opções; Sem redução por zumbis remove apenas esse limite específico, e todos os outros limites de segurança continuam ativos.
+        -- Entra em vigor assim que um administrador clica em Aplicar. Padrão = Escolha do jogador
+        -- 1 = Forçar redução
+        -- 2 = Escolha do jogador
+        -- 3 = Sem redução por zumbis
+        ZombieAreaSlowdown = 2,
+        -- Alcance de detecção: cadáveres no chão de 2 a 48 metros à frente (110 metros com configurações de alta velocidade) e a até 3 metros de cada lado da linha de direção.
+        -- Quando ativado, cadáveres que o veículo não consegue evitar (sem espaço, passagem bloqueada por um obstáculo ou com “Desviar de zumbis e cadáveres” desligado) limitam a velocidade a 30 km/h, sem outros níveis; cadáveres que ele consegue evitar não causam redução. Cadáveres não são obstáculos, então a direção automática não para por eles.
+        -- Forçar redução aplica isso a todos; Escolha do jogador (padrão) deixa cada jogador usar o HUD/as opções; Sem redução por cadáveres remove apenas esse limite específico, e todos os outros limites de segurança continuam ativos.
+        -- Entra em vigor assim que um administrador clica em Aplicar. Padrão = Escolha do jogador
+        -- 1 = Forçar redução
+        -- 2 = Escolha do jogador
+        -- 3 = Sem redução por cadáveres
+        CorpseSlowdown = 2,
+        -- Os animais selecionados são protegidos: a direção automática sempre os contorna. Se a opção “Desviar de animais” do jogador não os cobre, ela primeiro reduz a velocidade e depois os contorna com suavidade.
+        -- Só quando realmente não há espaço ela para diante do animal e espera que ele saia; se a espera se prolonga, passa devagar em velocidade muito baixa (uma batida em baixa velocidade não danifica o veículo, mas o animal ainda pode se ferir). Se o animal continuar bloqueando o caminho, a direção automática devolve o controle ao jogador.
+        -- Animais grandes (padrão) = veados, ovelhas, porcos, vacas e similares, além de filhotes que já cresceram; Todos os animais = animais pequenos como galinhas, coelhos e perus também contam; Desligado = nunca reduz nem para por animais (animais cobertos por “Desviar de animais” do jogador continuam sendo desviados sem frear). Padrão = Animais grandes
+        -- 1 = Desligado
+        -- 2 = Animais grandes
+        -- 3 = Todos os animais
+        AnimalSlowdown = 2,
+        -- O que a direção automática faz quando a rota à frente está bloqueada.
+        -- Desviar (padrão) contorna o obstáculo, pelo acostamento ou grama se necessário. Se a via inteira estiver bloqueada, ela para, verifica terreno livre até cerca de 13 m de cada lado e contorna por fora da estrada (ao rebocar, também verifica se o reboque cabe). Só para de vez quando não há como contornar.
+        -- Parar significa que ela sempre reduz e para, devolvendo o controle ao jogador. A mais conservadora.
+        -- Entra em vigor assim que um administrador clica em Aplicar. Padrão = Desviar
+        -- 1 = Desviar
+        -- 2 = Parar
+        ObstaclePolicy = 1,
+        -- Quanto a direção automática se mantém à direita, conforme a largura da via em que está: 1.0 (padrão) anda no meio da faixa da direita; 0.5 fica na faixa da direita, porém mais perto da linha central; 2.0 fica o mais à direita possível; 0 desativa e anda pelo meio da rota.
+        -- Vias estreitas são tratadas automaticamente sem subir no meio-fio. Quando um veículo no sentido contrário invade sua faixa, a direção automática vai mais para a direita para passar; se não houver espaço à direita, ela reduz e para para deixar o outro veículo passar.
+        -- Entra em vigor na próxima vez que a direção automática for iniciada depois que um administrador clicar em Aplicar. Mín: 0.00 Máx: 2.00 Padrão: 1.00
+        RightLaneBias = 1.0,
+        -- No multijogador, os jogadores só recebem outros veículos a cerca de 64–88 blocos, então dois carros se cruzando em velocidade só se veem 1–2 segundos antes. Quando ativado, o servidor também informa cada jogador em direção automática sobre veículos em movimento e com motorista até 300 blocos à frente, para que a direção automática possa se manter à direita ou reduzir com antecedência. O desvio final continua usando as posições de veículos que o próprio jogo sincroniza.
+        -- Geralmente menos de 2 KB/s por jogador em direção automática, até cerca de 5 KB/s com muitos veículos por perto; nada é enviado quando não há veículos por perto. Ativado por padrão.
+        -- Entra em vigor assim que um administrador clica em Aplicar.
+        TrafficRelay = true,
+        -- Adiciona diagnósticos dos sensores: círculos vermelhos são obstáculos sólidos, laranja marca o veículo em movimento mais próximo e pontos verdes são as bordas da faixa da via. A trajetória translúcida azul/amarela normal é controlada nas opções do MOD ou na seção Direção automática do minimapa; esta opção controla apenas os marcadores de diagnóstico. Adiciona um pequeno custo de renderização no cliente, então mantenha desligado normalmente. Entra em vigor assim que um administrador clica em Aplicar.
+        DebugOverlay = false,
+        -- Quando ativado, o jogo de cada jogador guarda na memória os últimos segundos de dados da direção automática e envia clipes curtos ao servidor só quando algo dá errado (atolado, colisão, frenagem de emergência, retomada após um problema), além de um pequeno resumo de cada viagem.
+        -- Nada é gravado no disco dos jogadores. Os arquivos ficam no servidor em Zomboid/Lua/MinidoracatAutoDrive/Uploads/, uma pasta por jogador, com index.txt listando cada clipe.
+        -- Os jogadores podem recusar nas opções do MOD. Desativado por padrão.
+        -- Entra em vigor assim que um administrador clica em Aplicar (a partir do próximo início da direção automática).
+        DiagnosticsUpload = false,
+        -- Espaço total em disco que o servidor pode usar para clipes de diagnóstico enviados. Quando cheio, os clipes mais antigos do servidor são apagados primeiro. Cada jogador mantém no máximo 32 clipes.
+        -- Os resumos de viagem usam uma rotação fixa separada de 8 MB.
+        -- Defina conforme o espaço livre no disco do servidor. Mín: 128 Máx: 16384 Padrão: 2048
+        DiagnosticsUploadMaxMB = 2048,
+    },
     MinidoracatSafeSpawn = {
         -- Ativa a proteção fantasma quando o jogador surge ou ressurge
         EnableGhostOnSpawn = true,
@@ -2012,10 +2472,6 @@ SandboxVars = {
         FontDebugConsole = false,
         -- Distance after which player won't show on a map. (Doesn't affect admins) Mín: -1 Máx: 999999999 Padrão: 999999999
         MaxDistance = 999999999,
-    },
-    ProjectCook = {
-        -- Permite que o Project Cook use alimentos congelados em Culinária básica e Cozinhando com Receitas, mesmo quando a receita do jogo base exige ingredientes descongelados. Desativado por padrão. Afeta apenas o Project Cook.
-        AllowFrozenCooking = true,
     },
     PropaneRefuel = {
         -- How much fuel a gas pump uses to fill an empty propane tank.
@@ -2072,19 +2528,14 @@ SandboxVars = {
         -- Vehicles heavier than this cannot be pushed. Set to 0 for no weight limit. Mín: 0 Máx: 100000 Padrão: 0
         MaximumPushableWeight = 0,
     },
-    PZ_Map = {
-        -- Off: PZ Map stops sending other players' positions to its browser page. Saves about 55 bytes per visible player per second.
-        SendPlayerPositions = true,
-        -- On: the PZ Map browser page never shows the player's own position, or the direction cone.
-        DisablePlayerMarker = false,
-        -- On: the PZ Map browser page shows the position dot but not which way the player faces.
-        DisableCompassDirection = false,
-        -- On: the direction cone shows only while the player carries a compass. Off: always shown.
-        RequireCompass = true,
-        -- On: locks PZ Map's Fog tickbox on, so unexplored areas stay hidden on the browser page.
-        MandatoryFog = false,
-        -- On: locks PZ Map's Darkness tickbox on, so the page dims the map when it's too dark to read.
-        MandatoryDarkness = false,
+    PZMCompanion = {
+        -- Sends everyone's position to the players you choose, so friends can see each other on projectzomboidmap.com. Off: nobody. Faction members only: each player sees their own faction. Everyone: all players on this server see each other. Padrão = Everyone on the server
+        -- 1 = Off
+        -- 2 = Faction members only
+        -- 3 = Everyone on the server
+        SharePositions = 3,
+        -- How often the server sends player positions. 1 is smooth; raise it on servers with many players to save bandwidth. Mín: 1 Máx: 10 Padrão: 1
+        ShareInterval = 1,
     },
     RainCleansBlood = {
         -- How many random tiles near each player to check and clean per in-game minute. Mín: 10 Máx: 2000 Padrão: 300
@@ -2130,6 +2581,39 @@ SandboxVars = {
         --  <ORANGE> Note: works only if «Auto-Pick Best Bandage» is ENABLED.
         SpecifyPick = false,
     },
+    Machinery = {
+        -- When disabled, operations use their fixed base yield, time and XP and do not cause skill-scaled accidents.
+        EnableSkillScaling = true,
+        -- Allows configured machine operations to injure the operator. Disable this to remove accident rolls entirely.
+        EnableInjuries = true,
+        -- Controls wear on installed parts such as circular blades. Required parts must still be installed.
+        EnablePartWear = true,
+        -- Controls whether fluid-powered machines require and consume fuel for operations.
+        EnableFuelConsumption = true,
+        -- Gas-powered machines expose their operator to dangerous fumes when operated inside an enclosed room. Repeated exposure can become fatal.
+        EnableIndoorExhaust = true,
+        -- Adjusts the effective skill used for yield, speed, XP and accident calculations. The UI still displays the character's real skill level. Padrão = Normal
+        -- 1 = Very Easy (+4 effective levels)
+        -- 2 = Easy (+2 effective levels)
+        -- 3 = Normal
+        -- 4 = Hard (-2 effective levels)
+        -- 5 = Very Hard (-4 effective levels)
+        SkillDifficulty = 3,
+        -- Multiplies item output after skill scaling. Results are rounded to the nearest whole item, with at least one output when the operation normally produces something. Mín: 0.25 Máx: 3.00 Padrão: 1.00
+        YieldMultiplier = 1.0,
+        -- Higher values make machine jobs take longer; lower values make them faster. Mín: 0.25 Máx: 5.00 Padrão: 1.00
+        ActionTimeMultiplier = 1.0,
+        -- Multiplies XP awarded by machine operations. Set to 0 to disable machine XP. Mín: 0.00 Máx: 5.00 Padrão: 1.00
+        XPMultiplier = 1.0,
+        -- Multiplies the final accident chance after skill scaling. Set to 0 to disable risk without disabling the injury system. Mín: 0.00 Máx: 5.00 Padrão: 1.00
+        AccidentRiskMultiplier = 1.0,
+        -- Multiplies blade and other installed-part wear. Set to 0 for no wear. Mín: 0.00 Máx: 5.00 Padrão: 1.00
+        PartWearMultiplier = 1.0,
+        -- Multiplies fluid fuel consumed per operation. Set to 0 for no fuel usage or requirement. Mín: 0.00 Máx: 5.00 Padrão: 1.00
+        FuelUseMultiplier = 1.0,
+        -- Multiplies toxic exposure from operating combustion-powered machines indoors. Set to 0 to remove exposure while retaining the warning. Mín: 0.00 Máx: 5.00 Padrão: 1.00
+        IndoorExhaustMultiplier = 1.0,
+    },
     RepairableWindows = {
         -- Sets the formula used to determine the chance for a character to break a window when attempting to pick it up. Placing a window never breaks it. <LINE> Vanilla mimics the values used by vanilla moveable windows - level 2 has a 45% chance to break, level 10 has a 5% chance. <LINE> Generous further reduces the chance to break a window - level 2 has a 45% chance, level 7 has a 0% chance. Padrão = Vanilla
         -- 1 = Vanilla
@@ -2137,11 +2621,73 @@ SandboxVars = {
         -- 3 = Windows never break
         BreakChance = 1,
     },
-    SandboxOptions = {
-        EnableRightClick = false,
-        ShowAdvanced = true,
-        -- Abre automaticamente o menu de Opções do Sandbox quando o jogo é pausado.
-        EnableOpenOnPause = true,
+    ReverseLights = {
+        -- On (default): while a vehicle is in reverse gear with its headlights on, its rear lamps turn bright white and cast a soft light behind it. Applies to your own vehicle and to nearby vehicles (multiplayer).
+        -- Off: the mod does nothing and the stock red tail lamps are left untouched.
+        Enabled = true,
+        -- Brightness of the white rear lamp spotlight while reversing. Range 0 to 1, default 0.75 (matches vanilla front headlights). Higher values make the lamps glow more strongly. Mín: 0.00 Máx: 1.00 Padrão: 0.75
+        LampBrightness = 0.75,
+        -- How far the reverse lamp light cone reaches, in tiles. Range 6 to 60, default 28. Mín: 6 Máx: 60 Padrão: 28
+        LampRange = 28,
+        -- Spread of the reverse lamp light cone. Lower values make a wider cone, higher values a narrower, more focused beam. Range 0.10 to 0.99, default 0.75 (matches vanilla headlights). Mín: 0.10 Máx: 0.99 Padrão: 0.75
+        LampCone = 0.75,
+        -- Sideways position of each reverse lamp, mirrored left and right, in tiles. Range 0 to 2, default 0.5. Mín: 0.00 Máx: 2.00 Padrão: 0.50
+        LampOffsetX = 0.5,
+        -- Position of the reverse lamps along the vehicle, in tiles. Negative values move them toward the rear. Range -5 to 5, default -1.6 (the stock tail lamp position). Mín: -5.00 Máx: 5.00 Padrão: -1.60
+        LampOffsetY = -1.6,
+        -- Color of the reverse lamp spotlight. Padrão = White
+        -- 1 = White
+        -- 2 = Warm White
+        -- 3 = Cool Blue
+        -- 4 = Amber
+        -- 5 = Red
+        -- 6 = Custom
+        LampColor = 1,
+        -- Red channel of the reverse lamp beam, used when Reverse Lamp Color is set to Custom. Default 255. Mín: 0 Máx: 255 Padrão: 255
+        CustomLampColorR = 255,
+        -- Green channel of the reverse lamp beam, used when Reverse Lamp Color is set to Custom. Default 0. Mín: 0 Máx: 255 Padrão: 0
+        CustomLampColorG = 0,
+        -- Blue channel of the reverse lamp beam, used when Reverse Lamp Color is set to Custom. Default 0. Mín: 0 Máx: 255 Padrão: 0
+        CustomLampColorB = 0,
+        -- Brightness of the soft pool of light cast on the ground behind the car. Range 0 to 1, default 0.4. Set to 0 for the lamp recolour only. Mín: 0.00 Máx: 1.00 Padrão: 0.40
+        GlowBrightness = 0.4,
+        -- Radius in tiles of the ground glow behind the car. Range 3 to 15, default 6. Mín: 3 Máx: 15 Padrão: 6
+        GlowRadius = 6,
+        -- Tint of the ground glow behind the car. Padrão = Cool White
+        -- 1 = Cool White
+        -- 2 = Warm White
+        -- 3 = Pale Blue
+        -- 4 = Red
+        -- 5 = Custom
+        GlowColor = 1,
+        -- Red channel of the ground glow, used when Ground Glow Color is set to Custom. Default 255. Mín: 0 Máx: 255 Padrão: 255
+        CustomGlowColorR = 255,
+        -- Green channel of the ground glow, used when Ground Glow Color is set to Custom. Default 0. Mín: 0 Máx: 255 Padrão: 0
+        CustomGlowColorG = 0,
+        -- Blue channel of the ground glow, used when Ground Glow Color is set to Custom. Default 0. Mín: 0 Máx: 255 Padrão: 0
+        CustomGlowColorB = 0,
+        -- On (default): a trailer attached behind a reversing vehicle also lights up.
+        -- Off: only the vehicles themselves light up.
+        AffectTrailers = true,
+    },
+    TrueSwimming = {
+        -- Desativado: a água volta a ser intransponível, como no jogo base.
+        Enabled = true,
+        -- Desativado: nadar custa 2,5 vezes mais resistência (como um não nadador no Aquatsar).
+        KnowsSwimming = true,
+        -- Multiplica a fadiga ao nadar. 1 = calibração do Aquatsar Yacht Club, 2 = duas vezes mais difícil, 0,5 = metade. Mín: 0.10 Máx: 5.00 Padrão: 1.00
+        StaminaMul = 1.0,
+        -- O que acontece quando a resistência acaba enquanto você nada. Padrão = Ferimentos progressivos (Aquatsar)
+        -- 1 = Ferimentos progressivos (Aquatsar)
+        -- 2 = Morte instantânea
+        -- 3 = Nenhum
+        Drowning = 1,
+        -- Exausto e sobrecarregado, o nadador solta os itens mais pesados (nunca o que está vestindo).
+        ItemLoss = true,
+        -- Mostra um pequeno indicador de resistência acima do nadador.
+        ShowBar = true,
+        -- Três segundos depois de entrar na água, sangue e sujeira são lavados do corpo e das roupas vestidas, sem sabão.
+        Washing = true,
     },
     TWF_BF = {
         -- Desativado (padrão): usa a tabela vanilla de distribuição de tamanhos dos peixes. Ativado: usa a distribuição Pequeno/Médio/Grande do Better Fishing. Os limites vanilla de peso por habilidade/espécie são sempre preservados.
@@ -2281,54 +2827,39 @@ SandboxVars = {
         -- Set chance to spawn a key in vehicle and near it (zombies, floor, buildings). Mín: 0 Máx: 100 Padrão: 70
         KeySpawn = 70,
     },
-    GamestaVehicleZones = {
-        -- Prevents ALL Vanilla Vehicles from Spawning if Enabled (including Jackie Jaye's LBMW Radio Van).
-        noVanillaVehicles = false,
-        -- Base chance to spawn a vehicle in a zone. Default is -1 (uses vanilla by default). Spawn rate is slightly influenced by the vanilla Vehicle Spawn Rate setting. Mín: -1 Máx: 100 Padrão: -1
-        spawnRate = -1,
-        -- Base chance to spawn a vehicle in traffic jam zones. Default is -1 (uses default of 100%). Spawn rate is slightly influenced by the vanilla Vehicle Spawn Rate setting. Mín: -1 Máx: 100 Padrão: -1
-        spawnRateModifiedTrafficJams = -1,
-        -- Whether new traffic jams spawn in Louisville.
-        trafficjamsLV = true,
-        -- Whether new traffic jams spawn outside Louisville.
-        trafficjamsExtra = true,
-        -- Controls how often corpses spawn in vehicles (default is 'Normal' or ~8% per seat). Padrão = Normal
-        -- 1 = None
-        -- 2 = Rare
-        -- 3 = Normal
-        -- 4 = Common
-        vehicleCorpseDistribution = 3,
-        -- Whether or not the player can climb vehicles.
-        climbVehicles = false,
-        -- Whether cars have a chance to spawn in good condition regardless of other vehicle settings. Random 'Good' vehicles is a VANILLA feature, this removes them.
-        noGoodCars = false,
-        -- Whether explosive devices (and fire?) can interact with vehicles.
-        interactBombVehicle = false,
-        -- A new system that allows for leaving the fuel pump nozzle in your car to pump gasoline at the vanilla rate of 1 liter per real life second.
-        autoVehicleFuelPumps = true,
-        -- Whether cars spawn facing in random directions.
-        randomAngle = true,
-        -- Whether the weather outside can affect players in vehicles; from breaking your windshield and having a hard time seeing to getting rained on with your window down.
-        weatherEffects = true,
-        -- Whether the player can exit a moving vehicle.
-        -- *Each Stage of Speed has a Unique Animation*
-        -- *Stage 1: NO DAMAGE at <30KPH*
-        -- *Stage 2: Damage (Extremities Only) at 30-50KPH*
-        -- *Stage 3: Damage (Almost Full Body) at >50KPH*
-        -- *Scales with Speed and Other Factors*
-        earlyExitVehicle = true,
-        -- The Damage Multiplier Used for Exiting a *Fast* Moving Vehicle (this multiplier affects damage applied to the player and the clothing worn by that player). Mín: 0.00 Máx: 3.00 Padrão: 1.00
-        earlyExitVehicleDamage = 1.0,
-        -- Base chance to spawn a burnt vehicle in a zone. Default is -1 (uses vanilla by default). Spawn rate is slightly influenced by the vanilla Vehicle Spawn Rate setting. Mín: -1 Máx: 100 Padrão: -1
-        spawnRateBurnt = -1,
-        -- Controls how good condition vehicle parts are. -0.1 = disabled, 1.0 = perfect (higher for guaranteed), lower = worse. Mín: -0.10 Máx: 1.30 Padrão: -0.10
-        baseVehicleQuality = -0.1,
-        -- Chance that spawned vehicle parts are damaged. -1 means disabled, 100% means every part is always damaged. Mín: -1 Máx: 100 Padrão: -1
-        chanceToPartDamage = -1,
-        -- The initial MINIMUM number of propane tanks that can be filled from an industrial sized propane tank, which measures to 81 units per propane tank multiplied by this multiplier (default = 0, no one is coming to refill it). Mín: 0 Máx: 26512143 Padrão: 0
-        initMinIndustrialPropaneTankMulti = 0,
-        -- The initial MAXIMUM number of propane tanks that can be filled from an industrial sized propane tank, which measures to 81 units per propane tank multiplied by this multiplier (default = 170, the real world maximum value of a 1,000 gallon tank). Mín: 0 Máx: 26512143 Padrão: 170
-        initMaxIndustrialPropaneTankMulti = 170,
+    WorkingStrength = {
+        -- Scales every XP grant from this mod. 1.0 = default rate. Mín: 0.10 Máx: 10.00 Padrão: 1.00
+        XPMultiplier = 1.0,
+        -- Granted once when a tree you're chopping is felled. Vanilla already grants a little Strength XP per swing while overloaded (Burden Training's territory) -- this is separate, for the felling itself. Mín: 0.00 Máx: 20.00 Padrão: 3.00
+        ChopTreeXP = 3.0,
+        -- Granted when you pick up or place a moveable object (walls, windows, doors, fences, and other objects the game's Moveables system covers). Mín: 0.00 Máx: 20.00 Padrão: 2.00
+        MoveablesXP = 2.0,
+        -- Granted each time you grab a corpse to drag it. Mín: 0.00 Máx: 20.00 Padrão: 1.50
+        GrabCorpseXP = 1.5,
+        -- Granted when you finish building something (walls, furniture frames, fortifications). Mín: 0.00 Máx: 20.00 Padrão: 2.50
+        BuildXP = 2.5,
+        -- Granted when you finish demolishing a built object. Mín: 0.00 Máx: 20.00 Padrão: 2.00
+        DestroyXP = 2.0,
+        -- If enabled, grabbing a corpse also grants a small amount of Fitness XP alongside Strength.
+        GrantFitnessBonus = true,
+        -- Prints each XP grant to the console. Leave off for normal play.
+        DebugLog = false,
+    },
+    ZomboidCarPaint = {
+        -- Mín: 1 Máx: 120 Padrão: 10
+        GrindingSeconds = 10,
+        -- Mín: 0 Máx: 25 Padrão: 5
+        CleanRustThresholdPercent = 5,
+        -- Mín: 1 Máx: 120 Padrão: 10
+        FillerApplicationSeconds = 10,
+        -- Mín: 1 Máx: 120 Padrão: 10
+        FillerSandingSeconds = 10,
+        -- Mín: 1 Máx: 180 Padrão: 15
+        PaintingSeconds = 15,
+        DebugLogging = false,
+        EnableFactorySkinAdmin = false,
+        -- Mín: 0 Máx: 100 Padrão: 25
+        MechanicShopStationChance = 25,
     },
     ZombieCureSyringe = {
         -- Mín: 0.00 Máx: 100.00 Padrão: 0.10
@@ -2363,6 +2894,88 @@ SandboxVars = {
         AmazonaChance = 0.08,
         -- Os zombies não vão aparecer com essa roupa até que esse número de dias tenha sido sobrevivido no mundo atual. Zero significa que ela pode aparecer desde o começo. Mín: 0 Máx: 3650 Padrão: 180
         AmazonaMinDays = 180,
+    },
+    VFE = {
+        -- VFE weapons spawning attached to police zombies.
+        PoliceWeapons = true,
+        -- Weapons spawning attached to military zombies. (Not just VFE specific ones)
+        MilitaryWeapons = true,
+        -- Weapons spawning attached to survivor zombies. (Not just VFE specific ones)
+        SurvivorWeapons = true,
+        -- Weapons spawning attached to other zombies zombies, like bikers. (Not just VFE specific ones)
+        OtherWeapons = true,
+        -- VFE weapons spawning inside vehicle inventories.
+        CarWeapons = true,
+        -- VFE weapons spawning inside of normal houses.
+        HouseWeapons = true,
+        -- Multiplier to weapons spawning in houses (Requires previous option enabled) Mín: 0.10 Máx: 10.00 Padrão: 1.00
+        HouseWeaponsMulti = 1.0,
+        -- Allows spawning of weapons like the M60 Machinegun.
+        HeavyWeapons = true,
+        -- Global multiplier for how many VFE firearms spawn in containers. Mín: 0.10 Máx: 10.00 Padrão: 1.00
+        GunLootMulti = 1.0,
+        -- VFE firearms spawning in army storage, bunkers and military lockers.
+        LootMilitary = true,
+        -- VFE firearms spawning in police, SWAT and security storage.
+        LootPolice = true,
+        -- VFE firearms spawning in gun stores and pawn shops.
+        LootStore = true,
+        -- VFE firearms spawning in drug labs, dealer shacks and floor-plank stashes.
+        LootCriminal = true,
+        -- VFE firearms spawning in hunter, trapper and survival containers.
+        LootHunting = true,
+        -- VFE firearms spawning in survivor safehouse stashes that appear as the world ages.
+        LootSafehouse = true,
+        -- Vanilla-only firearms (JS14, L92, L94, MSR7T, Trapper Carbine, JS3T) plus the M1911 and both small revolvers stop spawning in the containers VFE fills. They still appear on zombies, in vehicles and in every other vanilla list.
+        RemoveVanillaGuns = false,
+        -- Range the x2 scope adds to the weapon. Mín: -20 Máx: 50 Padrão: 5
+        AT_x2ScopeRange = 5,
+        -- Aiming time the x2 scope adds. Higher = slower to aim. Mín: -50 Máx: 50 Padrão: 5
+        AT_x2ScopeAim = 5,
+        -- Range the x4 scope adds to the weapon. Mín: -20 Máx: 50 Padrão: 10
+        AT_x4ScopeRange = 10,
+        -- Aiming time the x4 scope adds. Higher = slower to aim. Mín: -50 Máx: 50 Padrão: 10
+        AT_x4ScopeAim = 10,
+        -- Range the x8 scope adds to the weapon. Mín: -20 Máx: 50 Padrão: 15
+        AT_x8ScopeRange = 15,
+        -- Aiming time the x8 scope adds. Higher = slower to aim. Mín: -50 Máx: 50 Padrão: 20
+        AT_x8ScopeAim = 20,
+        -- Aiming time the red dot adds. Negative = faster to aim. Mín: -50 Máx: 50 Padrão: -10
+        AT_RedDotAim = -10,
+        -- Aiming time the improved irons add. Negative = faster to aim. Mín: -50 Máx: 50 Padrão: -5
+        AT_IronSightAim = -5,
+        -- Aiming time the laser adds. Negative = faster to aim. Mín: -50 Máx: 50 Padrão: -5
+        AT_LaserAim = -5,
+        -- Hit chance the laser adds. Mín: -50 Máx: 50 Padrão: 10
+        AT_LaserHit = 10,
+        -- Aiming time the bipod adds. Negative = faster to aim. Mín: -50 Máx: 50 Padrão: -5
+        AT_BipodAim = -5,
+        -- Hit chance the bipod adds. Mín: -50 Máx: 50 Padrão: 30
+        AT_BipodHit = 30,
+        -- Range the bipod adds to the weapon. Mín: -20 Máx: 50 Padrão: 5
+        AT_BipodRange = 5,
+        -- Aiming time the recoil pad adds. Negative = faster to aim. Mín: -50 Máx: 50 Padrão: -5
+        AT_RecoilPadAim = -5,
+        -- Recoil delay the pad adds. Negative = faster follow-up shots. Never lets a weapon reach 0. Mín: -20 Máx: 20 Padrão: -2
+        AT_RecoilPadDelay = -2,
+        -- Loose rounds one box or pack yields, and how many go back in when packing. Admin panel overrides this. Mín: 1 Máx: 1000 Padrão: 20
+        Ammo_762 = 20,
+        -- Loose rounds one box or pack yields, and how many go back in when packing. Admin panel overrides this. Mín: 1 Máx: 1000 Padrão: 20
+        Ammo_223 = 20,
+        -- Loose rounds one box or pack yields, and how many go back in when packing. Admin panel overrides this. Mín: 1 Máx: 1000 Padrão: 50
+        Ammo_22 = 50,
+        -- Loose rounds one box or pack yields, and how many go back in when packing. Admin panel overrides this. Mín: 1 Máx: 1000 Padrão: 20
+        Ammo_545 = 20,
+        -- Loose rounds one box or pack yields, and how many go back in when packing. Admin panel overrides this. Mín: 1 Máx: 1000 Padrão: 30
+        Ammo_76254 = 30,
+        -- Loose rounds one box or pack yields, and how many go back in when packing. Admin panel overrides this. Mín: 1 Máx: 1000 Padrão: 50
+        Ammo_57 = 50,
+        -- Loose rounds one box or pack yields, and how many go back in when packing. Admin panel overrides this. Mín: 1 Máx: 1000 Padrão: 50
+        Ammo_46 = 50,
+        -- Loose rounds one box or pack yields, and how many go back in when packing. Admin panel overrides this. Mín: 1 Máx: 1000 Padrão: 90
+        Ammo_556bp = 90,
+        -- Loose rounds one box or pack yields, and how many go back in when packing. Admin panel overrides this. Mín: 1 Máx: 1000 Padrão: 30
+        Ammo_m13 = 30,
     },
     AutoGateRemote = {
         -- Maximum distance, in tiles, from which an Auto Gate Remote can operate its paired gate. Default: 30. Mín: 5 Máx: 100 Padrão: 30
@@ -2408,6 +3021,110 @@ SandboxVars = {
         DustClothSpawn = true,
         -- Esse valor é um divisor do valor da esponja. 1 = mesma probabilidade que toalha de banho. 2 = metade da probabilidade. Mín: 1 Máx: 10 Padrão: 1
         DustClothSpawnProbabilty = 1,
+    },
+    CompanionDogs = {
+        -- Quanta confiança (alimentando) o pet precisa atingir para virar seu companheiro. Mín: 1 Máx: 1000 Padrão: 100
+        TameThreshold = 100,
+        -- Número máximo de animais que um jogador pode manter vinculados ao mesmo tempo. 0 = sem limite. Mín: 0 Máx: 30 Padrão: 0
+        MaxCompanions = 0,
+        -- Permite que pets ataquem zumbis próximos.
+        CombatEnabled = true,
+        -- Dano padrão é 1. 0 desativa a morte do zumbi. Mín: 0.00 Máx: 5.00 Padrão: 1.00
+        DogDamageMultiplier = 1.0,
+        -- Ativa ou desativa fome, sede, lealdade e estresse.
+        UpkeepEnabled = true,
+        -- Ritmo de fome e sede por dia. Aumentar faz o pet comer e beber mais. Mín: 0.00 Máx: 5.00 Padrão: 1.00
+        NeedsRateMultiplier = 1.0,
+        -- Perda padrão. Pet com fome ou sede perde mais rápido. Mín: 0.00 Máx: 100.00 Padrão: 12.00
+        LoyaltyDecayPerDay = 12.0,
+        -- Ativa a necessidade do animal de ter proteína na dieta.
+        ProteinNeedEnabled = true,
+        -- Quantas horas o pet pode ficar sem proteína até ficar Fraco. Mín: 6 Máx: 168 Padrão: 72
+        ProteinHours = 72,
+        -- Habilidade dos pets de detectar zumbis.
+        SentinelEnabled = true,
+        -- Diminuição de tédio ao acariciar ou dormir com o animal.
+        BondingEnabled = true,
+        -- Moodle com buff que reduz pânico, estresse, tristeza e tédio e faz cansar mais devagar.
+        RestedBuffEnabled = true,
+        -- Quantas horas o moodle Bem Descansado dura. Mín: 0.50 Máx: 24.00 Padrão: 2.00
+        RestedBuffHours = 2.0,
+        -- Ativa o moodle com buffs únicos de cada raça.
+        BreedMoodlesEnabled = true,
+        -- Multiplicador global das skills do pet. Mín: 0.10 Máx: 10.00 Padrão: 0.50
+        SkillXPRate = 0.5,
+        -- Permite que o pet tenha a opção de cuidar dos animais em zonas. Impacta a performance do servidor (baixo impacto).
+        FarmCareEnabled = true,
+        -- Ativa os truques do pet. Pode ser OP em servidor.
+        TricksEnabled = true,
+        -- Latido, miado etc. podem atrair zumbis.
+        DogNoiseAttractsZombies = true,
+        -- Texto com o nome do pet. Desligue para mais imersão.
+        ShowNameTags = true,
+        -- Taxa de spawn dos animais. Padrão é 1, 0 desativa o spawn. Mín: 0.00 Máx: 5.00 Padrão: 1.00
+        DogSpawnMultiplier = 1.0,
+        -- Ligado, animais selvagens não morrem por atropelamento, fogo, ataque etc.
+        WildDogsInvincible = false,
+        -- Se o dono desloga do servidor, o animal desloga junto.
+        DespawnOnOwnerOffline = true,
+        -- Multiplicador da carga do alforje. 0 deixa ele apenas cosmético. Mín: 0.00 Máx: 5.00 Padrão: 1.00
+        CargoCapacityMultiplier = 1.0,
+        -- Permite que os pets se reproduzam. Impacta a performance do servidor (baixo impacto).
+        BreedingEnabled = true,
+        -- Quantos dias de jogo uma pet grávida leva até parir. Mín: 1 Máx: 60 Padrão: 4
+        GestationDays = 4,
+        -- Quantos dias de jogo um filhote leva para virar adulto. Mín: 1 Máx: 365 Padrão: 90
+        MaturityDays = 90,
+        -- Chance percentual por dia de jogo de um macho e uma fêmea adultos do mesmo dono, perto um do outro, cruzarem sozinhos (sorteio a cada hora). Mesmas condições do cruzamento manual: alimentados, leais, saudáveis, fora do intervalo de espera, uma vaga de cão livre e cruzamento não bloqueado nos dois. Só enquanto estiverem carregados perto de você. 0 = desligado. Mín: 0.00 Máx: 100.00 Padrão: 5.00
+        BreedChancePerDay = 5.0,
+        -- Ligado, correr sobre um pet pode te derrubar.
+        TripOverDogs = true,
+        -- Pet pode contrair ferimentos e doenças. Padrão: ativo.
+        VetCareEnabled = true,
+        -- Todos começam sabendo de todas as receitas do vetcare, sem precisar da revista do mod.
+        VetRecipesUnlocked = true,
+        -- Pet pode morrer por doenças, fome e sede. Padrão: desativado.
+        Death = false,
+        -- Chance da mordida que o pet dá num zumbi machucar a pata. Padrão 0,4 por cento. Cada nível de Combate do pet tira 5 por cento desse valor, e no nível 10 ele cai pela metade. Mín: 0.00 Máx: 100.00 Padrão: 0.40
+        VetWoundChance = 0.4,
+        -- Chance percentual de cada cerca que o pet pula deixá-lo com a pata torcida. Padrão 0.5, 0 nunca torce. Mín: 0.00 Máx: 100.00 Padrão: 0.50
+        VetSprainChance = 0.5,
+        -- Chance percentual de o pet pegar vermes a cada 6 horas com o estômago virado. Padrão 10 por cento. Mín: 0.00 Máx: 100.00 Padrão: 10.00
+        VetWormsChance = 10.0,
+        -- Chance de comida ou água ruim deixar seu pet vomitando. Padrão 25 por cento. Mín: 0.00 Máx: 100.00 Padrão: 25.00
+        VetSpoiledChance = 25.0,
+        -- Chance de pegar gripe, rolada quando o cão está com fome e a cada hora ao lado de um cão doente. Padrão 15 por cento. Mín: 0.00 Máx: 100.00 Padrão: 15.00
+        VetFluChance = 15.0,
+        -- A cada 6 horas seguidas ao ar livre. Entrar em casa zera a conta. Padrão 1,5 por cento. Mín: 0.00 Máx: 100.00 Padrão: 1.50
+        VetHeartwormChance = 1.5,
+        -- Chance de o animal nascer alérgico a uma carne pela vida toda, sorteada uma vez por animal. Padrão 5 por cento. Mín: 0.00 Máx: 100.00 Padrão: 5.00
+        VetAllergyChance = 5.0,
+        -- Chance de cada mordida em luta trazer pulga ou carrapato. Padrão 0,2 por cento. Mín: 0.00 Máx: 100.00 Padrão: 0.20
+        VetInfestChance = 0.2,
+    },
+    StayWithMe = {
+        -- Scales how fast friendship and romance grow from all sources. Applied after the daily caps and only to gains, never to losses. 1.0 = default. Mín: 0.00 Máx: 5.00 Padrão: 1.00
+        RelationshipGainMultiplier = 1.0,
+        -- Base friendship gained per day from talking, deeds and gifts before tier and relaxed bonuses. Default 6. Mín: 0 Máx: 50 Padrão: 6
+        DailyFriendCap = 6,
+        -- Base romance gained per day before tier and relaxed bonuses. Only applies once romance is open. Default 3. Mín: 0 Máx: 50 Padrão: 3
+        DailyRomanceCap = 3,
+        -- Scales how much affection a given gift item is worth, before the daily gift cap. 1.0 = default. Mín: 0.00 Máx: 5.00 Padrão: 1.00
+        GiftAffectionMultiplier = 1.0,
+        -- Base friendship that gifts can add per day, before tier bonuses. Separate from the talk cap. Default 3. Mín: 0 Máx: 50 Padrão: 3
+        DailyGiftCapFriend = 3,
+        -- Base romance that gifts can add per day, before tier bonuses. Separate from the talk cap. Default 1. Mín: 0 Máx: 50 Padrão: 1
+        DailyGiftCapRomance = 1,
+        -- Friendship she needs before romance can open (0-100). Default 30. Mín: 0 Máx: 100 Padrão: 30
+        RomanceRequirementFriend = 30,
+        -- Days she must have known you before romance can open. Default 2. Mín: 0 Máx: 30 Padrão: 2
+        RomanceRequirementDays = 2,
+        -- Friendship lost when you hit her and the per-player 'hits matter' setting is on. Romance loss scales at five eighths of this value. 0 = no loss. Default 8. Mín: 0 Máx: 50 Padrão: 8
+        RelationshipLossOnHit = 8,
+        -- Flat bonus to her carry capacity on top of the Strength-based value (0-20). Default 0. Mín: 0 Máx: 20 Padrão: 0
+        CarryCapacityBonus = 0,
+        -- Scales how much talking and her presence relieve boredom, unhappiness, stress, anger and pain. 1.0 = default. Mín: 0.00 Máx: 3.00 Padrão: 1.00
+        MoodEffectMultiplier = 1.0,
     },
     GeneratorPoweredBuildings = {
         -- Enable the building heating system. This setting is currently supported reliably in singleplayer. When disabled, generators will not heat buildings and consume no fuel for heating. Default: Enabled
@@ -2458,6 +3175,10 @@ SandboxVars = {
         LGExtendedElectricityCompatibility = false,
         -- Experimental fallback for other power-grid mods. Use the separate LG Extended Electricity option for LG support. When enabled, CHB may accept electricity reported on the boiler square by another mod when no normal grid or directly detectable vanilla generator is found. Fuel and load accounting for external sources may differ from normal CHB operation.
         CompatibilityMode = false,
+    },
+    Compass_Direction_Indicator = {
+        -- Ligado: o cone de direção só aparece enquanto você estiver com uma bússola. Desligado: o cone de direção é sempre exibido. O ponto da sua posição no mapa não muda em nenhum dos casos.
+        RequireCompass = true,
     },
     ComputerMod = {
         -- Mín: 0 Máx: 100 Padrão: 14
@@ -2517,6 +3238,46 @@ SandboxVars = {
         -- Mín: 0 Máx: 100 Padrão: 28
         SecretSiteHintChance = 28,
     },
+    DisassembleMetalGratesAndStairs = {
+        -- Welding skill level required to disassemble the metal grates, stairs, railings and trim covered by this mod. 0 = no requirement. Mín: 0 Máx: 10 Padrão: 3
+        MinMetalweldingLevel = 3,
+    },
+    eds_hk = {
+        -- Changes the loot multiplier of How Do Electric Radiators Work. Padrão = Normal
+        -- 1 = Very Rare
+        -- 2 = Rare
+        -- 3 = Normal
+        -- 4 = Common
+        -- 5 = Plentiful
+        MagazineSpawnRarity = 3,
+        -- Changes the loot multiplier of Electric Radiators. Padrão = Normal
+        -- 1 = Very Rare
+        -- 2 = Rare
+        -- 3 = Normal
+        -- 4 = Common
+        -- 5 = Plentiful
+        RadiatorSpawnRarity = 3,
+        -- Required Perk Level in Electricity for crafting Mín: 0 Máx: 10 Padrão: 4
+        Electricity = 4,
+        -- Required Perk Level in Welding for crafting Mín: 0 Máx: 10 Padrão: 3
+        MetalWelding = 3,
+        -- When this setting is active, the crafting recipe must be learned from the magazine, or it will be learned when a defined skill level is reached.
+        needToBeLearn = true,
+        -- Once this level in Electricity is reached, the crafting recipe will be unlocked (additive).
+        -- 0=no automatic unlock Mín: 0 Máx: 10 Padrão: 6
+        AutoLearnByElectricity = 6,
+        -- Once this level in Welding is reached, the crafting recipe will be unlocked (additive).
+        -- 0=no automatic unlock Mín: 0 Máx: 10 Padrão: 5
+        AutoLearnByMetalWelding = 5,
+        -- Radiator temperature at level 1 Mín: 16 Máx: 28 Padrão: 20
+        BaseTemp = 20,
+        -- At level 1, the base temperature applies. For each additional level, the temperature increases by this value. Mín: 1 Máx: 3 Padrão: 2
+        TempStepByLevel = 2,
+        -- Radius of the radiator's heat source at level 1 Mín: 5 Máx: 12 Padrão: 9
+        BaseRadius = 9,
+        -- At level 1, the base radius of the heat source applies. For each additional level, the radius increases by this value. Mín: 1 Máx: 3 Padrão: 1
+        RadiusStepByLevel = 1,
+    },
     Excavation = {
         -- Permite cavar escadas inferiores ao nível -1. 
         --  <RED> Isso pode causar glitches gráficos severos que podem causar epilepsia.
@@ -2536,6 +3297,32 @@ SandboxVars = {
         -- 1 = Build 41
         -- 2 = Build 42
         IconStyle = 2,
+    },
+    FTZCarts = {
+        -- Chance for a room where carts make sense (supermarket, warehouse, laundry, garden store, janitor closet, shed...) to have carts standing on the floor, rolled once per room. Small rooms such as sheds and motel rooms use a lower chance. 0 = never. Mín: 0 Máx: 100 Padrão: 35
+        WorldSpawnChance = 35,
+        -- Maximum number of carts standing in the same room (the actual number is rolled between 1 and this maximum). Mín: 1 Máx: 5 Padrão: 2
+        WorldSpawnMax = 2,
+        -- How often carts show up as container loot (hardware stores, Gigamart, tool crates...). 100 = like the original mod, 0 = never, 500 = five times more. Mín: 0 Máx: 500 Padrão: 100
+        LootRate = 100,
+        -- Weight a shopping cart can hold (37 by default). Mín: 1 Máx: 100 Padrão: 37
+        CartCapacity = 37,
+        -- Weight a warehouse platform trolley can hold (50 by default). Mín: 1 Máx: 100 Padrão: 50
+        TrolleyCapacity = 50,
+        -- Weight a laundry cart can hold (40 by default). Mín: 1 Máx: 100 Padrão: 40
+        LaundryCapacity = 40,
+        -- Weight a garden cart can hold (45 by default). Mín: 1 Máx: 100 Padrão: 45
+        GardenCapacity = 45,
+        -- Weight a janitor cart can hold (30 by default). Mín: 1 Máx: 100 Padrão: 30
+        JanitorCapacity = 30,
+        -- Weight a hand truck can hold (35 by default). Mín: 1 Máx: 100 Padrão: 35
+        HandTruckCapacity = 35,
+        -- Weight a wheelbarrow can hold (40 by default). Mín: 1 Máx: 100 Padrão: 40
+        WheelbarrowCapacity = 40,
+        -- Chance for a cart found standing in the world to hold a few items that fit the cart and the place: groceries in a supermarket, laundry in a laundromat, parcels in a post office, bags of concrete on a building site... 0 = always empty. Mín: 0 Máx: 100 Padrão: 60
+        SpawnFilledChance = 60,
+        -- Weight a makeshift cart can hold (37 by default). Mín: 1 Máx: 100 Padrão: 37
+        MakeshiftCapacity = 37,
     },
     FunctionalAppliances = {
         -- How often filled beer kegs spawn in bars. Padrão = Normal
@@ -2647,6 +3434,12 @@ SandboxVars = {
         -- Vanilla shows this number in debug mode only.
         ShowFuelAmount = false,
     },
+    GurneyTransport = {
+        -- How tiring it is to push a loaded gurney. At 100, a full gurney tires you about as fast as jogging, and an empty one costs nothing extra. 0 makes pushing free, 200 makes it twice as tiring. At 875, pushing a full gurney is as tiring as dragging one body by hand. Mín: 0 Máx: 1000 Padrão: 100
+        PushEffort = 100,
+        -- When on, a gurney carries anything, not just bodies, so it doubles as a loot cart. The heavier the load, the more tiring it is to push. When off, only bodies can go on a gurney, and anything already on one stays there.
+        LootOnGurney = true,
+    },
     GydeTraitMags = {
         -- Permite obter a versão positiva de um traço caso o personagem tenha começado com sua versão negativa (ex.: Motorista de domingo ? Demônio da velocidade).
         -- 
@@ -2742,114 +3535,50 @@ SandboxVars = {
         StaminaMultiplier = 1.0,
         RidingPainGrunt = true,
     },
-    MinidoracatAutoDrive = {
-        -- Quando ativado, o jogador precisa carregar um Navegador GPS com carga, ou o veículo precisa ter um Navegador GPS instalado e uma bateria com carga, antes de traçar uma rota. Com o mod Map Watch instalado, usar um Map Watch ligado com um Módulo de Posicionamento também conta.
-        -- Desativado (padrão): qualquer um pode traçar uma rota a qualquer momento.
-        -- Entra em vigor assim que um administrador clica em Aplicar.
-        NeedItemForNav = false,
-        -- Quando ativado (padrão), o veículo precisa ter um Módulo de Piloto Automático instalado para iniciar a direção automática.
-        -- Desativado: qualquer veículo pode dirigir sozinho, bom para testes ou partidas casuais.
-        -- Entra em vigor assim que um administrador clica em Aplicar.
-        NeedItemForAutoDrive = true,
-        -- Permite que os jogadores fabriquem o Navegador GPS com a receita de elétrica (requer Elétrica 3).
-        -- Quando desativado, a receita não pode ser feita. O saque do mundo e o fornecimento por administradores são controlados à parte; itens existentes não são afetados.
-        -- Entra em vigor assim que um administrador clica em Aplicar.
-        AllowCraftGPS = true,
-        -- Permite que os jogadores fabriquem o Módulo de Piloto Automático com a receita de elétrica (requer Elétrica 6).
-        -- Quando desativado, a receita não pode ser feita. O saque do mundo e o fornecimento por administradores são controlados à parte; itens existentes não são afetados.
-        -- Entra em vigor assim que um administrador clica em Aplicar.
-        AllowCraftAutopilot = true,
-        -- Ativado (padrão): adiciona Navegadores GPS ao saque de depósitos de eletrônicos do exército, estoque diverso de lojas de eletrônicos, ferramentas de engenheiro e caixas de eletrônicos.
-        -- Desativado: impede novo saque de GPS. Itens existentes e recipientes que já geraram conteúdo não são removidos.
-        -- Depois que um administrador clica em Aplicar, recipientes cujo conteúdo ainda não foi gerado usam a nova configuração imediatamente.
-        SpawnGPS = true,
-        -- Ativado (padrão): adiciona Módulos de Piloto Automático ao saque de depósitos de eletrônicos do exército, componentes de fábricas de rádio e estoque de computadores de lojas de eletrônicos.
-        -- Desativado: impede novo saque de módulos. Itens existentes e recipientes que já geraram conteúdo não são removidos.
-        -- Depois que um administrador clica em Aplicar, recipientes cujo conteúdo ainda não foi gerado usam a nova configuração imediatamente.
-        SpawnAutopilot = true,
-        -- Ajusta apenas a energia usada pela navegação GPS ativa. O padrão 50 é metade da taxa base; 100 é a taxa base, 200 é o dobro e 0 desativa esse consumo.
-        -- Um GPS instalado usa a bateria do veículo; um GPS portátil usa a própria bateria. Com o motor ligado, o alternador original carrega ao mesmo tempo; em toda a faixa 0–500 a bateria continua ganhando carga líquida, e o multiplicador só muda a velocidade de recarga.
-        -- As cargas de energia do GPS e da direção automática se somam quando ambos estão ativos.
-        -- Entra em vigor assim que um administrador clica em Aplicar. Mín: 0 Máx: 500 Padrão: 50
-        GPSPowerPercent = 50,
-        -- Ajusta apenas a carga na bateria do veículo enquanto a direção automática está ativa. O padrão 50 é metade da taxa base; 100 é a taxa base, 200 é o dobro e 0 desativa esse consumo.
-        -- A direção automática exige o motor ligado, então o alternador original carrega ao mesmo tempo; em toda a faixa 0–500 a bateria continua ganhando carga líquida, e o multiplicador só muda a velocidade de recarga. Essa carga é somada à do GPS.
-        -- Entra em vigor assim que um administrador clica em Aplicar. Mín: 0 Máx: 500 Padrão: 50
-        AutoDrivePowerPercent = 50,
-        -- Adiciona consumo de combustível enquanto o motorista navega com um GPS instalado ou com um GPS portátil carregado. O padrão 50 adiciona 2,5% ao consumo original desse veículo; 100 adiciona 5%, 200 adiciona 10% e 0 não adiciona nada.
-        -- Um GPS portátil continua gastando a própria bateria; os extras de combustível do GPS e da direção automática se somam quando ambos estão ativos.
-        -- Entra em vigor assim que um administrador clica em Aplicar. Mín: 0 Máx: 500 Padrão: 50
-        GPSFuelPercent = 50,
-        -- Adiciona consumo de combustível apenas enquanto a direção automática está ativa. O padrão 50 adiciona 12,5% ao consumo original desse veículo; 100 adiciona 25%, 200 adiciona 50% e 0 não adiciona nada.
-        -- Com GPS e direção automática ativos no padrão, o extra total é 15%; o consumo original não é descontado duas vezes.
-        -- Durante a direção automática, o consumo original é calculado na marcha que você usaria nessa velocidade dirigindo, então reduzir antes de curvas e obstáculos não gasta combustível a mais.
-        -- Entra em vigor assim que um administrador clica em Aplicar. Mín: 0 Máx: 500 Padrão: 50
-        AutoDriveFuelPercent = 50,
-        -- Quando ativado (padrão), instalar ou remover um Navegador GPS ou Módulo de Piloto Automático de um veículo requer Elétrica 1.
-        -- Uma chave de fenda e uma bateria de veículo são sempre necessárias, independentemente desta opção.
-        -- Desativado: qualquer um pode instalar e remover os dispositivos.
-        -- Entra em vigor assim que um administrador clica em Aplicar.
-        InstallSkillGate = true,
-        -- Velocidade máxima permitida durante a direção automática.
-        -- Valores menores são mais seguros e batem menos em obstáculos; valores maiores são mais rápidos, porém mais arriscados.
-        -- A velocidade real continua limitada pelas condições da estrada, pelo desempenho do veículo e pela redução nas curvas.
-        -- Depois que um administrador clica em Aplicar, reinicie a direção automática para usar o novo limite. Mín: 5 Máx: 120 Padrão: 120
-        AutoDriveMaxSpeed = 120,
-        -- Alcance de detecção: zumbis individuais de 2 a 48 metros à frente (110 metros com configurações de alta velocidade) e a até 3 metros de cada lado da linha de direção.
-        -- Quando ativado, zumbis que o veículo não consegue evitar (sem espaço, passagem bloqueada por um obstáculo ou com “Desviar de zumbis e cadáveres” desligado) limitam a velocidade pela quantidade: 1–3 a 35, 4–7 a 25, 8 ou mais a 15 km/h; zumbis que ele consegue evitar não causam redução. Zumbis não são obstáculos, então a direção automática não para por eles.
-        -- Forçar redução aplica isso a todos; Escolha do jogador (padrão) deixa cada jogador usar o HUD/as opções; Sem redução por zumbis remove apenas esse limite específico, e todos os outros limites de segurança continuam ativos.
-        -- Entra em vigor assim que um administrador clica em Aplicar. Padrão = Escolha do jogador
-        -- 1 = Forçar redução
-        -- 2 = Escolha do jogador
-        -- 3 = Sem redução por zumbis
-        ZombieAreaSlowdown = 2,
-        -- Alcance de detecção: cadáveres no chão de 2 a 48 metros à frente (110 metros com configurações de alta velocidade) e a até 3 metros de cada lado da linha de direção.
-        -- Quando ativado, cadáveres que o veículo não consegue evitar (sem espaço, passagem bloqueada por um obstáculo ou com “Desviar de zumbis e cadáveres” desligado) limitam a velocidade a 30 km/h, sem outros níveis; cadáveres que ele consegue evitar não causam redução. Cadáveres não são obstáculos, então a direção automática não para por eles.
-        -- Forçar redução aplica isso a todos; Escolha do jogador (padrão) deixa cada jogador usar o HUD/as opções; Sem redução por cadáveres remove apenas esse limite específico, e todos os outros limites de segurança continuam ativos.
-        -- Entra em vigor assim que um administrador clica em Aplicar. Padrão = Escolha do jogador
-        -- 1 = Forçar redução
-        -- 2 = Escolha do jogador
-        -- 3 = Sem redução por cadáveres
-        CorpseSlowdown = 2,
-        -- Os animais selecionados são protegidos: a direção automática sempre os contorna. Se a opção “Desviar de animais” do jogador não os cobre, ela primeiro reduz a velocidade e depois os contorna com suavidade.
-        -- Só quando realmente não há espaço ela para diante do animal e espera que ele saia; se a espera se prolonga, passa devagar em velocidade muito baixa (uma batida em baixa velocidade não danifica o veículo, mas o animal ainda pode se ferir). Se o animal continuar bloqueando o caminho, a direção automática devolve o controle ao jogador.
-        -- Animais grandes (padrão) = veados, ovelhas, porcos, vacas e similares, além de filhotes que já cresceram; Todos os animais = animais pequenos como galinhas, coelhos e perus também contam; Desligado = nunca reduz nem para por animais (animais cobertos por “Desviar de animais” do jogador continuam sendo desviados sem frear). Padrão = Animais grandes
-        -- 1 = Desligado
-        -- 2 = Animais grandes
-        -- 3 = Todos os animais
-        AnimalSlowdown = 2,
-        -- O que a direção automática faz quando a rota à frente está bloqueada.
-        -- Desviar (padrão) contorna o obstáculo, pelo acostamento ou grama se necessário. Se a via inteira estiver bloqueada, ela para, verifica terreno livre até cerca de 13 m de cada lado e contorna por fora da estrada (ao rebocar, também verifica se o reboque cabe). Só para de vez quando não há como contornar.
-        -- Parar significa que ela sempre reduz e para, devolvendo o controle ao jogador. A mais conservadora.
-        -- Entra em vigor assim que um administrador clica em Aplicar. Padrão = Desviar
-        -- 1 = Desviar
-        -- 2 = Parar
-        ObstaclePolicy = 1,
-        -- Quanto a direção automática se mantém à direita, conforme a largura da via em que está: 1.0 (padrão) anda no meio da faixa da direita; 0.5 fica na faixa da direita, porém mais perto da linha central; 2.0 fica o mais à direita possível; 0 desativa e anda pelo meio da rota.
-        -- Vias estreitas são tratadas automaticamente sem subir no meio-fio. Quando um veículo no sentido contrário invade sua faixa, a direção automática vai mais para a direita para passar; se não houver espaço à direita, ela reduz e para para deixar o outro veículo passar.
-        -- Entra em vigor na próxima vez que a direção automática for iniciada depois que um administrador clicar em Aplicar. Mín: 0.00 Máx: 2.00 Padrão: 1.00
-        RightLaneBias = 1.0,
-        -- No multijogador, os jogadores só recebem outros veículos a cerca de 64–88 blocos, então dois carros se cruzando em velocidade só se veem 1–2 segundos antes. Quando ativado, o servidor também informa cada jogador em direção automática sobre veículos em movimento e com motorista até 300 blocos à frente, para que a direção automática possa se manter à direita ou reduzir com antecedência. O desvio final continua usando as posições de veículos que o próprio jogo sincroniza.
-        -- Geralmente menos de 2 KB/s por jogador em direção automática, até cerca de 5 KB/s com muitos veículos por perto; nada é enviado quando não há veículos por perto. Ativado por padrão.
-        -- Entra em vigor assim que um administrador clica em Aplicar.
-        TrafficRelay = true,
-        -- Adiciona diagnósticos dos sensores: círculos vermelhos são obstáculos sólidos, laranja marca o veículo em movimento mais próximo e pontos verdes são as bordas da faixa da via. A trajetória translúcida azul/amarela normal é controlada nas opções do MOD ou na seção Direção automática do minimapa; esta opção controla apenas os marcadores de diagnóstico. Adiciona um pequeno custo de renderização no cliente, então mantenha desligado normalmente. Entra em vigor assim que um administrador clica em Aplicar.
-        DebugOverlay = false,
-        -- Quando ativado, o jogo de cada jogador guarda na memória os últimos segundos de dados da direção automática e envia clipes curtos ao servidor só quando algo dá errado (atolado, colisão, frenagem de emergência, retomada após um problema), além de um pequeno resumo de cada viagem.
-        -- Nada é gravado no disco dos jogadores. Os arquivos ficam no servidor em Zomboid/Lua/MinidoracatAutoDrive/Uploads/, uma pasta por jogador, com index.txt listando cada clipe.
-        -- Os jogadores podem recusar nas opções do MOD. Desativado por padrão.
-        -- Entra em vigor assim que um administrador clica em Aplicar (a partir do próximo início da direção automática).
-        DiagnosticsUpload = false,
-        -- Espaço total em disco que o servidor pode usar para clipes de diagnóstico enviados. Quando cheio, os clipes mais antigos do servidor são apagados primeiro. Cada jogador mantém no máximo 32 clipes.
-        -- Os resumos de viagem usam uma rotação fixa separada de 8 MB.
-        -- Defina conforme o espaço livre no disco do servidor. Mín: 128 Máx: 16384 Padrão: 2048
-        DiagnosticsUploadMaxMB = 2048,
+    LpBContainerSigns = {
+        -- Interruptor principal. Desativado, ninguém pode escrever ou apagar um nome, mas placas já escritas permanecem no lugar e legíveis.
+        WritingEnabled = true,
+        -- Placas vão apenas em caixas e nada mais — o armazenamento usado para construir uma base. Desativado, qualquer contêiner no mundo pode receber uma placa: guarda-roupas, geladeiras, armários, balcões. Isso governa tanto a exibição quanto a escrita, então ativar também remove placas de tudo que não seja caixa.
+        CratesOnly = true,
+        -- Escrever precisa de um item marcado como instrumento de escrita (caneta, lápis, canetas coloridas), e pintar precisa de um pincel mais uma lata de tinta. Desativado, qualquer um pode escrever com as mãos.
+        RequireWritingTool = true,
+        -- Afeta apenas ferramentas que realmente se desgastam: uma lata de tinta perde um uso, uma caneta não, exatamente como no vanilla quando usada para anotar um mapa.
+        ConsumeToolUse = true,
+        -- Dentro de um safehouse, apenas seus membros podem escrever ou apagar em um contêiner. Admins são isentos para que uma placa alterada possa ser limpa. Fora dos safehouses isso não muda nada.
+        RestrictToSafehouse = true,
+        -- Quantos caracteres uma placa pode ter. Limitado a 28, o mesmo limite que o vanilla coloca ao renomear um contêiner. Mín: 4 Máx: 28 Padrão: 24
+        MaxLabelLength = 24,
+        -- Uma ripa de madeira pregada na frente do contêiner.
+        AllowPlankSign = true,
+        -- Uma folha de papel colada na frente do contêiner.
+        AllowPaperSign = true,
+        -- O nome pintado diretamente no contêiner, na cor da tinta usada. Este estilo precisa de pincel.
+        AllowPaintedSign = true,
+        -- Escreve o que o mod está fazendo em console.txt em cada cliente e em server-console.txt no servidor: uma linha por ação e por solicitação recebida. Desativado por padrão, e vale a pena deixar assim — um servidor movimentado gera muito disso. Ative para relatar um bug.
+        DebugLogging = false,
     },
     ModularMetalShelves = {
         -- Capacidade de cada um dos três níveis de uma prateleira em ilha recém-construída. O jogo limita contêineres no chão a 100, a menos que um contorno desse limite esteja instalado. Mín: 1 Máx: 1000 Padrão: 100
         LevelCapacity = 100,
         -- Um nível da prateleira é desenhado cheio quando seu conteúdo atinge esta porcentagem da capacidade, em peso. Abaixo disso, mostra poucos itens. Mín: 1 Máx: 100 Padrão: 50
         FullAtPercent = 50,
+    },
+    MowingWithScythe = {
+        -- Allows you to adjust the number of grass tufts gained from mowing the lawn action. Mín: 0.10 Máx: 100.00 Padrão: 1.00
+        GrassTuftsMultiplierMowing = 1.0,
+        -- Allows you to adjust the number of grass seeds gained from mowing the lawn action. Mín: 0.10 Máx: 100.00 Padrão: 1.00
+        GrassSeedsMultiplierMowing = 1.0,
+        -- Allows you to adjust the XP gained from mowing the lawn action.
+        -- Set to 0 to disable XP gain. Mín: 0.00 Máx: 100.00 Padrão: 1.00
+        XPMultiplierMowing = 1.0,
+        -- Allows you to adjust the number of dead leaves gained from raking leaves action. Mín: 0.10 Máx: 100.00 Padrão: 1.00
+        LeavesMultiplierRaking = 1.0,
+        -- Allows you to adjust the XP gained from raking leaves action.
+        -- Set to 0 to disable XP gain. Mín: 0.00 Máx: 100.00 Padrão: 1.00
+        XPMultiplierRakingLeaves = 1.0,
+        -- Allows you to adjust the XP gained from sowing grass seeds action.
+        -- Set to 0 to disable XP gain. Mín: 0.00 Máx: 100.00 Padrão: 1.00
+        XPMultiplierSowingGrass = 1.0,
     },
     Mulch = {
         -- A chipper left running but not cutting anything. The default of 45 is about a running generator, which carries 40. Every radius here is halved indoors. Set to 0 and idling is silent. Mín: 0 Máx: 200 Padrão: 45
@@ -2946,6 +3675,27 @@ SandboxVars = {
         -- Marks every registered shop with its name on the world map (M) and with a dot on the minimap. VIP shops are drawn in gold. Turn it off if players should find them on their own.
         ShowShopsOnMap = true,
     },
+    RemoveAndInstallDoors = {
+        -- Carpentry level required to remove or install a door. Mín: 0 Máx: 10 Padrão: 2
+        MinimumCarpentryLevel = 2,
+        -- Tools that must be in your inventory. A hammer is always required. Padrão = Hammer
+        -- 1 = Hammer
+        -- 2 = Hammer + Screwdriver
+        -- 3 = Hammer + Screwdriver + Crowbar
+        RequiredTools = 1,
+        -- Gives 2 hinges back when a door is removed and consumes 2 when installed.
+        ReturnHinges = true,
+        -- Weight of a carried door. Mín: 0 Máx: 20 Padrão: 5
+        DoorWeight = 5,
+        -- Time in seconds to remove, install or dismantle a door. Default: 2 seconds. Mín: 0 Máx: 60 Padrão: 2
+        DoorActionTime = 2,
+        -- When enabled, double doors and garage doors can also be removed and reinstalled. These are multi-tile doors and may behave oddly.
+        RemoveDoubleAndGarageDoors = true,
+        -- When enabled, a captured double, garage or any other multi-tile door can be rotated with the rotate-building key (default R) while placing it.
+        RotateMultiDoors = true,
+        -- When enabled, writes Remove & Install Doors debug messages to console.txt. Leave off unless troubleshooting.
+        DebugMode = false,
+    },
     RET_LTS = {
         -- Ativa a postura de bruços; desative esta opção se quiser usar outro mod que implemente essa postura (compatibilidade não garantida). Padrão: ativado.
         AllowProne = true,
@@ -2971,6 +3721,14 @@ SandboxVars = {
         Disable_ExteriorTileAndStone = true,
         -- Disable fire spread to some other tiles. Currently only applies to two tiles used for synthetic rubber track surfaces.
         Disable_OtherSprites = true,
+    },
+    AnimalFatRendering = {
+        -- Multiplier for fat yield when butchering animals from the ground
+        -- 0.3 is default, Recommended to not put higher due to fat spawning on smaller critters like chickens. Mín: 0.00 Máx: 2.00 Padrão: 0.30
+        GroundMultiplier = 0.3,
+        -- Multiplier for fat yield when processing animals on the butcher hook
+        -- 1.0 is default. Mín: 1.00 Máx: 4.00 Padrão: 2.00
+        HookMultiplier = 2.0,
     },
     SkillRecoveryJournal = {
         -- A quantidade de experiencia recuperada ao ler diários encadernados.
@@ -3034,22 +3792,6 @@ SandboxVars = {
         -- 3 = Desligadas
         Falls = 1,
     },
-    SuperBulldozerOptions = {
-        -- Controls how often Super Bulldozers spawn in the world. 0 = No spawns, 1.0 = Default, 10.0 = Maximum. Higher values increase spawn chance. Mín: 0.00 Máx: 99.00 Padrão: 2.00
-        SpawnRate = 2.0,
-        -- Allow the bulldozer to use Standard Mode with normal loot drops.
-        AllowStandardMode = true,
-        -- Allow the bulldozer to use the no-loot version of Standard Mode.
-        AllowStandardNoLootMode = true,
-        -- Allow the bulldozer to replace cleared ground with gravel.
-        AllowGravelMode = true,
-        -- Allow the bulldozer to use the most destructive terrain-clearing mode.
-        AllowExtremeMode = true,
-        -- Allow the bulldozer to clear only foliage, trees, and similar natural obstacles.
-        AllowFoliageMode = true,
-        -- Allow the bulldozer to kill zombies without damaging the environment.
-        AllowZombieOnlyMode = true,
-    },
     TanksHavePropane = {
         -- If enabled, propane tanks and blowtorches can also be refilled at gas station pumps (in addition to propane storage tanks).
         AllowGasPumps = false,
@@ -3057,76 +3799,6 @@ SandboxVars = {
         AllowSmallIndustrialTanks = false,
         -- How far (in tiles) to search for a propane source around the item on the ground. Mín: 1 Máx: 10 Padrão: 2
         SearchRadius = 2,
-    },
-    TankWater = {
-        -- Controls how often Tank Water mod items appear in loot (x0.25, x0.50, x0.75, x1, x2, x3, x5). Padrão = x1
-        -- 1 = x0.25
-        -- 2 = x0.50
-        -- 3 = x0.75
-        -- 4 = x1
-        -- 5 = x2
-        -- 6 = x3
-        -- 7 = x5
-        LootSpawnMultiplier = 4,
-        -- Enables Tank Water motor pump start/loop/stop sounds. Enabled by default.
-        EnableSounds = true,
-    },
-    TrueSmoking = {
-        -- TÜM tütün ürünlerinin genel yanma hızı
-        -- 25 = hiç bitmez · 100 = dengeli · 200 = çok hızlı biter Mín: 0.10 Máx: 3.00 Padrão: 1.00
-        SmokingSpeed = 1.0,
-        -- Her nefeste alınan nikotin vuruşu ve stres/can sıkıntısı azaltma gücü
-        -- 50 = zayıf · 100 = normal · 200 = çok güçlü Mín: 0.00 Máx: 3.00 Padrão: 1.00
-        PuffStrength = 1.0,
-        -- Yürürken, koşarken veya sprint atarken ne kadar hızlı yanar
-        -- 25 = neredeyse yanmaz · 100 = normal · 200 = hareketle çok hızlı yanar Mín: 0.00 Máx: 3.00 Padrão: 1.00
-        MovementBurn = 1.0,
-        -- Hareketsiz dururken sigaranın sönme hızı
-        -- 0 = asla sönmez (her zaman yanık kalır)
-        -- 100 = normal sönme (yeniden yakmak gerekir) Mín: 0.00 Máx: 3.00 Padrão: 1.00
-        IdleBurnOut = 1.0,
-        -- Multiplies all effects from smoking (nicotine, stress relief, boredom relief, etc.)
-        -- 50 = half effects · 100 = normal · 200 = double effects Mín: 0.10 Máx: 3.00 Padrão: 1.00
-        EffectMultiplier = 1.0,
-        -- How much smoking reduces hunger
-        -- 0 = no hunger reduction · 0.25 = subtle (default) · 1.0 = vanilla strength · 2.0 = double Mín: 0.00 Máx: 2.00 Padrão: 0.25
-        HungerReduction = 0.25,
-        -- How much smoking reduces fatigue
-        -- 0 = no fatigue reduction · 0.25 = subtle (default) · 1.0 = vanilla strength · 2.0 = double Mín: 0.00 Máx: 2.00 Padrão: 0.25
-        FatigueReduction = 0.25,
-        -- Sigara içerken şemag, gaz maskesi vb. otomatik çıkarılır, bitince geri takılır
-        ManageHeadGear = true,
-        -- Köz zayıfladığında tamamen sönmeden tekrar yakılabilir
-        SmokeRelighting = true,
-        -- Nikotin seviyesi ve yoksunluğu daha iyi gösteren yeni mood ikonunu etkinleştir
-        UseNewMoodle = true,
-        -- Nefes çekerken öksürme şansı
-        Coughing = true,
-        -- Sigara İçen özelliği varsa nefes başına öksürme şansı (%) Mín: 0 Máx: 100 Padrão: 4
-        CoughingChanceSmoker = 4,
-        -- Sigara İçen özelliği yoksa nefes başına öksürme şansı (%) Mín: 0 Máx: 100 Padrão: 15
-        CoughingChanceNonSmoker = 15,
-        -- Düşerken, tırmanırken veya zombi çarptığında yanan sigarayı düşürme şansı
-        Dropping = true,
-        -- Sigara İçen özelliği varsa düşürme şansı (%) Mín: 0 Máx: 100 Padrão: 6
-        DropChanceSmoker = 6,
-        -- Sigara İçen özelliği yoksa düşürme şansı (%) (çok sakar!) Mín: 0 Máx: 100 Padrão: 35
-        DropChanceNonSmoker = 35,
-        -- Nikotin takibi, yoksunluk etkileri ve dinamik bağımlılık sistemini açar
-        UseNicotineSystem = true,
-        -- Sigara içme alışkanlığına göre özellik otomatik kazanılır/kaybedilir
-        DynamicSmokerTrait = true,
-        -- Yoğun sigara içtikten kaç oyun günü sonra Sigara İçen özelliği alınır Mín: 1 Máx: 60 Padrão: 10
-        DaysToAddiction = 10,
-        -- Hiç içmeyince kaç oyun günü sonra Sigara İçen özelliği kaybolur Mín: 3 Máx: 90 Padrão: 30
-        DaysToDetox = 30,
-        -- Sigarayı bıraktıktan kaç gün sonra yoksunluk semptomları en kötü olur Mín: 1 Máx: 7 Padrão: 2
-        DaysToPeakWithdrawal = 2,
-        -- Sigara İçen özelliği varken bağımlılık ve yoksunluk ne kadar hızlı azalır
-        -- Yüksek = daha hızlı azalır Mín: 0.10 Máx: 1.00 Padrão: 0.80
-        SmokerTraitDecayMultiplier = 0.8,
-        -- Enable debug logging and debug UI panel (for mod developers and troubleshooting)
-        DebugMode = false,
     },
     UsefulBarrels = {
         -- Enables additional information for debugging purposes.
@@ -3217,5 +3889,464 @@ SandboxVars = {
         SprinklerTargetWater = 80,
         -- Enable detailed debug logging to the server console.
         Debug = false,
+    },
+    BaseOrganizer = {
+        -- Ativa ou desativa o mod neste mundo.
+        Enabled = true,
+        -- Distância máxima, em quadrados, usada pelo botão Organizar. Mín: 1 Máx: 5 Padrão: 2
+        NearbyRange = 3,
+        -- Tempo entre ciclos automáticos de conferência de containers carregados. Mín: 5 Máx: 300 Padrão: 30
+        ScanIntervalSeconds = 30,
+        -- Quantidade de containers conferidos por etapa. Valores menores reduzem picos em bases grandes. Mín: 1 Máx: 10 Padrão: 2
+        ScanBatchSize = 2,
+        -- Permite alterar nome e regras pelo catálogo mesmo longe do container.
+        AllowRemoteEditing = true,
+        -- No multiplayer, permite que jogadores comuns cadastrem, alterem e removam regras. Desativado: somente níveis administrativos.
+        AllowPlayerConfiguration = true,
+        -- Remove automaticamente registros que permaneceram ausentes além do prazo definido.
+        AutoCleanupMissing = false,
+        -- Dias de jogo que um container removido/destruído permanece registrado antes de poder ser limpo automaticamente. Mín: 1 Máx: 365 Padrão: 30
+        MissingRetentionDays = 30,
+    },
+    EBFChainsaw = {
+        -- Permite loot do EBF Chainsaw em fazendas e locais agrÃ­colas.
+        EnableFarmSpawns = true,
+        -- Peso de spawn do manual da motosserra neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.02
+        FarmManual = 0.02,
+        -- Peso de spawn da motosserra neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.05
+        FarmChainsaw = 0.05,
+        -- Peso de spawn de correntes novas neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.05
+        FarmNewChain = 0.05,
+        -- Peso de spawn de correntes usadas neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.20
+        FarmWornChain = 0.2,
+        -- Peso de spawn de correntes quebradas neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.50
+        FarmBrokenChain = 0.5,
+        -- Peso de spawn de elos de corrente neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.02
+        FarmChainLink = 0.02,
+        -- Peso de spawn de correntes pesadas neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.05
+        FarmHeavyChain = 0.05,
+        -- Peso de spawn de correntes com gancho neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.01
+        FarmHeavyChainHook = 0.01,
+        -- Permite loot do EBF Chainsaw em lojas de ferramentas e lojas gerais.
+        EnableStoreSpawns = true,
+        -- Peso de spawn do manual da motosserra neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.01
+        StoreManual = 0.01,
+        -- Peso de spawn da motosserra neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.01
+        StoreChainsaw = 0.01,
+        -- Peso de spawn de correntes novas neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.04
+        StoreNewChain = 0.04,
+        -- Peso de spawn de correntes usadas neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.03
+        StoreWornChain = 0.03,
+        -- Peso de spawn de correntes quebradas neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.02
+        StoreBrokenChain = 0.02,
+        -- Peso de spawn de elos de corrente neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.03
+        StoreChainLink = 0.03,
+        -- Peso de spawn de correntes pesadas neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.04
+        StoreHeavyChain = 0.04,
+        -- Peso de spawn de correntes com gancho neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.02
+        StoreHeavyChainHook = 0.02,
+        -- Permite loot do EBF Chainsaw em locais residenciais.
+        EnableResidentialSpawns = true,
+        -- Peso de spawn do manual da motosserra neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.00
+        ResidentialManual = 0.0,
+        -- Peso de spawn da motosserra neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.01
+        ResidentialChainsaw = 0.005,
+        -- Peso de spawn de correntes novas neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.01
+        ResidentialNewChain = 0.005,
+        -- Peso de spawn de correntes usadas neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.01
+        ResidentialWornChain = 0.01,
+        -- Peso de spawn de correntes quebradas neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.02
+        ResidentialBrokenChain = 0.02,
+        -- Peso de spawn de elos de corrente neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.00
+        ResidentialChainLink = 0.0,
+        -- Peso de spawn de correntes pesadas neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.01
+        ResidentialHeavyChain = 0.005,
+        -- Peso de spawn de correntes com gancho neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.00
+        ResidentialHeavyChainHook = 0.0,
+        -- Permite loot do EBF Chainsaw em garagens.
+        EnableGarageSpawns = true,
+        -- Peso de spawn do manual da motosserra neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.00
+        GarageManual = 0.0,
+        -- Peso de spawn da motosserra neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.01
+        GarageChainsaw = 0.01,
+        -- Peso de spawn de correntes novas neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.04
+        GarageNewChain = 0.04,
+        -- Peso de spawn de correntes usadas neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.03
+        GarageWornChain = 0.03,
+        -- Peso de spawn de correntes quebradas neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.02
+        GarageBrokenChain = 0.02,
+        -- Peso de spawn de elos de corrente neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.03
+        GarageChainLink = 0.03,
+        -- Peso de spawn de correntes pesadas neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.04
+        GarageHeavyChain = 0.04,
+        -- Peso de spawn de correntes com gancho neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.01
+        GarageHeavyChainHook = 0.01,
+        -- Permite loot do EBF Chainsaw em empresas, escritÃ³rios e prateleiras mecÃ¢nicas.
+        EnableBusinessSpawns = true,
+        -- Peso de spawn do manual da motosserra neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.01
+        BusinessManual = 0.01,
+        -- Peso de spawn da motosserra neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.00
+        BusinessChainsaw = 0.0,
+        -- Peso de spawn de correntes novas neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.00
+        BusinessNewChain = 0.0,
+        -- Peso de spawn de correntes usadas neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.00
+        BusinessWornChain = 0.0,
+        -- Peso de spawn de correntes quebradas neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.00
+        BusinessBrokenChain = 0.0,
+        -- Peso de spawn de elos de corrente neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.00
+        BusinessChainLink = 0.0,
+        -- Peso de spawn de correntes pesadas neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.00
+        BusinessHeavyChain = 0.0,
+        -- Peso de spawn de correntes com gancho neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.00
+        BusinessHeavyChainHook = 0.0,
+        -- Permite loot do EBF Chainsaw em indÃºstrias, fÃ¡bricas, construÃ§Ã£o e metalurgia.
+        EnableIndustrialSpawns = true,
+        -- Peso de spawn do manual da motosserra neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.00
+        IndustrialManual = 0.0,
+        -- Peso de spawn da motosserra neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.02
+        IndustrialChainsaw = 0.02,
+        -- Peso de spawn de correntes novas neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.04
+        IndustrialNewChain = 0.04,
+        -- Peso de spawn de correntes usadas neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.04
+        IndustrialWornChain = 0.04,
+        -- Peso de spawn de correntes quebradas neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.03
+        IndustrialBrokenChain = 0.03,
+        -- Peso de spawn de elos de corrente neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.05
+        IndustrialChainLink = 0.05,
+        -- Peso de spawn de correntes pesadas neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.05
+        IndustrialHeavyChain = 0.05,
+        -- Peso de spawn de correntes com gancho neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.03
+        IndustrialHeavyChainHook = 0.03,
+        -- Permite loot do EBF Chainsaw em lojas de caÃ§a, armas e camping.
+        EnableHuntingStoreSpawns = true,
+        -- Peso de spawn do manual da motosserra neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.01
+        HuntingStoreManual = 0.01,
+        -- Peso de spawn da motosserra neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.02
+        HuntingStoreChainsaw = 0.02,
+        -- Peso de spawn de correntes novas neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.04
+        HuntingStoreNewChain = 0.04,
+        -- Peso de spawn de correntes usadas neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.03
+        HuntingStoreWornChain = 0.03,
+        -- Peso de spawn de correntes quebradas neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.02
+        HuntingStoreBrokenChain = 0.02,
+        -- Peso de spawn de elos de corrente neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.01
+        HuntingStoreChainLink = 0.01,
+        -- Peso de spawn de correntes pesadas neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.02
+        HuntingStoreHeavyChain = 0.02,
+        -- Peso de spawn de correntes com gancho neste grupo de locais. Use 0 para desativar este item neste local. Mín: 0.00 Máx: 100.00 Padrão: 0.01
+        HuntingStoreHeavyChainHook = 0.01,
+        -- Condição inicial das correntes novas criadas, instaladas sem valor salvo ou encontradas sem dados do mod. Mínimo 51 para manter a corrente como nova. Mín: 51.00 Máx: 100.00 Padrão: 100.00
+        NewChainCondition = 100.0,
+        -- Condição inicial das correntes usadas encontradas sem dados do mod. O limite máximo é 50 porque acima disso a corrente é considerada nova. Mín: 1.00 Máx: 50.00 Padrão: 50.00
+        WornChainCondition = 50.0,
+        -- Ativa ou desativa o desgaste da corrente enquanto a motosserra está ligada sem cortar árvore. O valor real fica controlado pelo mod.
+        EnableChainIdleWear = true,
+        -- Desgaste da corrente aplicado nos ciclos de corte de árvore. Mín: 0.00 Máx: 100.00 Padrão: 0.80
+        ChainTreeWear = 0.8,
+        -- Desgaste da corrente para cada golpe confirmado em zumbi com a motosserra. Mín: 0.00 Máx: 100.00 Padrão: 1.00
+        ZombieHitChainWear = 1.0,
+        -- Consumo base de gasolina da motosserra. Use valores menores para economizar combustível ou maiores para gastar mais rápido. Mín: 0.00 Máx: 100.00 Padrão: 0.25
+        FuelConsumption = 0.25,
+        -- Dano aplicado à árvore por ciclo de corte quando a corrente está entre 51% e 100%. Mín: 0.00 Máx: 1000.00 Padrão: 35.00
+        TreeDamageNewChain = 35.0,
+        -- Dano aplicado à árvore por ciclo de corte quando a corrente está entre 1% e 50%. Mín: 0.00 Máx: 1000.00 Padrão: 30.00
+        TreeDamageWornChain = 30.0,
+        -- MinDamage e MaxDamage da motosserra quando ela está sem corrente. Mín: 0.00 Máx: 100.00 Padrão: 0.60
+        CombatDamageNoChain = 0.6,
+        -- MinDamage e MaxDamage da motosserra quando ela tem corrente instalada, mas está desligada. Mín: 0.00 Máx: 100.00 Padrão: 1.00
+        CombatDamageWithChain = 1.0,
+        -- MinDamage e MaxDamage da motosserra quando ela está ligada. Mín: 0.00 Máx: 100.00 Padrão: 2.00
+        CombatDamageRunning = 2.0,
+    },
+    GamestaVehicleZones = {
+        -- Prevents ALL Vanilla Vehicles from Spawning if Enabled (including Jackie Jaye's LBMW Radio Van).
+        noVanillaVehicles = false,
+        -- Base chance to spawn a vehicle in a zone. Default is -1 (uses vanilla by default). Spawn rate is slightly influenced by the vanilla Vehicle Spawn Rate setting. Mín: -1 Máx: 100 Padrão: -1
+        spawnRate = -1,
+        -- Base chance to spawn a vehicle in traffic jam zones. Default is -1 (uses default of 100%). Spawn rate is slightly influenced by the vanilla Vehicle Spawn Rate setting. Mín: -1 Máx: 100 Padrão: -1
+        spawnRateModifiedTrafficJams = -1,
+        -- Whether new traffic jams spawn in Louisville.
+        trafficjamsLV = true,
+        -- Whether new traffic jams spawn outside Louisville.
+        trafficjamsExtra = true,
+        -- Controls how often corpses spawn in vehicles (default is 'Normal' or ~8% per seat). Padrão = Normal
+        -- 1 = None
+        -- 2 = Rare
+        -- 3 = Normal
+        -- 4 = Common
+        vehicleCorpseDistribution = 3,
+        -- Whether or not the player can climb vehicles.
+        climbVehicles = false,
+        -- Whether cars have a chance to spawn in good condition regardless of other vehicle settings. Random 'Good' vehicles is a VANILLA feature, this removes them.
+        noGoodCars = false,
+        -- Whether explosive devices (and fire?) can interact with vehicles.
+        interactBombVehicle = false,
+        -- A new system that allows for leaving the fuel pump nozzle in your car to pump gasoline at the vanilla rate of 1 liter per real life second.
+        autoVehicleFuelPumps = true,
+        -- Whether cars spawn facing in random directions.
+        randomAngle = true,
+        -- Whether the weather outside can affect players in vehicles; from breaking your windshield and having a hard time seeing to getting rained on with your window down.
+        weatherEffects = true,
+        -- Whether the player can exit a moving vehicle.
+        -- *Each Stage of Speed has a Unique Animation*
+        -- *Stage 1: NO DAMAGE at <30KPH*
+        -- *Stage 2: Damage (Extremities Only) at 30-50KPH*
+        -- *Stage 3: Damage (Almost Full Body) at >50KPH*
+        -- *Scales with Speed and Other Factors*
+        earlyExitVehicle = true,
+        -- The Damage Multiplier Used for Exiting a *Fast* Moving Vehicle (this multiplier affects damage applied to the player and the clothing worn by that player). Mín: 0.00 Máx: 3.00 Padrão: 1.00
+        earlyExitVehicleDamage = 1.0,
+        -- Base chance to spawn a burnt vehicle in a zone. Default is -1 (uses vanilla by default). Spawn rate is slightly influenced by the vanilla Vehicle Spawn Rate setting. Mín: -1 Máx: 100 Padrão: -1
+        spawnRateBurnt = -1,
+        -- Controls how good condition vehicle parts are. -0.1 = disabled, 1.0 = perfect (higher for guaranteed), lower = worse. Mín: -0.10 Máx: 1.30 Padrão: -0.10
+        baseVehicleQuality = -0.1,
+        -- Chance that spawned vehicle parts are damaged. -1 means disabled, 100% means every part is always damaged. Mín: -1 Máx: 100 Padrão: -1
+        chanceToPartDamage = -1,
+        -- The initial MINIMUM number of propane tanks that can be filled from an industrial sized propane tank, which measures to 81 units per propane tank multiplied by this multiplier (default = 0, no one is coming to refill it). Mín: 0 Máx: 26512143 Padrão: 0
+        initMinIndustrialPropaneTankMulti = 0,
+        -- The initial MAXIMUM number of propane tanks that can be filled from an industrial sized propane tank, which measures to 81 units per propane tank multiplied by this multiplier (default = 170, the real world maximum value of a 1,000 gallon tank). Mín: 0 Máx: 26512143 Padrão: 170
+        initMaxIndustrialPropaneTankMulti = 170,
+    },
+    ExitEnterTrunk = {
+        -- Para uma saída mais realista pelo porta-malas, veículos com mais de 2 assentos exigem que o personagem já esteja sentado em um banco traseiro antes de sair pelo porta-malas. Veículos de 2 lugares podem sair por qualquer banco. Veículos com Special Compatibility ignoram esta opção.
+        RequireRearSeatForTrunkExit = false,
+        -- Para uma entrada mais realista pelo porta-malas, veículos com mais de 2 assentos colocarão o personagem em um banco traseiro disponível ao entrar pelo porta-malas, em vez de usar o primeiro assento disponível. Veículos de 2 lugares podem usar qualquer banco. Veículos com Special Compatibility ignoram esta opção.
+        RequireRearSeatForTrunkEntry = false,
+        -- Permite entrar pelo porta-malas mesmo quando ele estiver trancado. O porta-malas é destrancado automaticamente antes da entrada e permanece destrancado depois.
+        AllowLockedTrunkEntry = false,
+        -- Permite sair pelo porta-malas quando a saída traseira estiver fisicamente bloqueada. Quando possível, o personagem é movido para uma lateral livre do veículo.
+        AllowBlockedTrunkExit = false,
+        -- Mantém a porta do porta-malas aberta após sair pelo porta-malas, em vez de fechá-la automaticamente.
+        LeaveTrunkOpenOnExit = false,
+        -- Ignora a verificação de capacidade e do peso do conteúdo do porta-malas ao entrar ou sair por ele. Isso não altera a capacidade real de armazenamento do porta-malas. As demais restrições de entrada/saída continuam válidas.
+        IgnoreTrunkCapacityForEntryExit = false,
+    },
+    VisibleVehicleCoupling = {
+        -- When disabled, players and zombies never trip on a towline. Chance and modifier settings remain saved but are ignored.
+        TripEnabled = true,
+        -- Chance to stumble when crossing a taut vehicle coupling while walking. Padrão = Custom
+        -- 1 = 15%
+        -- 2 = 30%
+        -- 3 = 45%
+        -- 4 = 60%
+        -- 5 = 75%
+        -- 6 = 90%
+        -- 7 = Custom
+        WalkChancePreset = 7,
+        -- Custom walking chance, from 0 to 100%. Mín: 0.00 Máx: 100.00 Padrão: 10.00
+        WalkChanceCustom = 10.0,
+        -- Chance to stumble when crossing a taut vehicle coupling while running. Padrão = 30%
+        -- 1 = 15%
+        -- 2 = 30%
+        -- 3 = 45%
+        -- 4 = 60%
+        -- 5 = 75%
+        -- 6 = 90%
+        -- 7 = Custom
+        RunChancePreset = 2,
+        -- Custom running chance, from 0 to 100%. Mín: 0.00 Máx: 100.00 Padrão: 30.00
+        RunChanceCustom = 30.0,
+        -- Chance to stumble when crossing a taut vehicle coupling while sprinting. Padrão = Custom
+        -- 1 = 15%
+        -- 2 = 30%
+        -- 3 = 45%
+        -- 4 = 60%
+        -- 5 = 75%
+        -- 6 = 90%
+        -- 7 = Custom
+        SprintChancePreset = 7,
+        -- Custom sprinting chance, from 0 to 100%. Mín: 0.00 Máx: 100.00 Padrão: 50.00
+        SprintChanceCustom = 50.0,
+        -- Server-authoritative chance for a zombie to stumble when crossing a taut vehicle coupling. Padrão = 75%
+        -- 1 = 15%
+        -- 2 = 30%
+        -- 3 = 45%
+        -- 4 = 60%
+        -- 5 = 75%
+        -- 6 = 90%
+        -- 7 = Custom
+        ZombieChancePreset = 5,
+        -- Custom zombie trip chance, from 0 to 100%. Mín: 0.00 Máx: 100.00 Padrão: 75.00
+        ZombieChanceCustom = 75.0,
+        -- Enable or disable the fatigue effect on player trip chance.
+        Status_fatigue = true,
+        -- Applies when CharacterStat.FATIGUE is above zero. Multiplies the selected movement/trait base chance; stacks multiplicatively with other active status multipliers. Padrão = 1.2x
+        -- 1 = 1.2x
+        -- 2 = 1.4x
+        -- 3 = 1.6x
+        -- 4 = 1.8x
+        -- 5 = 2.0x
+        -- 6 = Custom
+        Status_fatigueMultiplierPreset = 1,
+        -- Custom factor from 0.1 to 5 applied to the selected base chance while fatigue is active; 1.2 means base chance × 1.2, not +1.2 percentage points. Mín: 0.10 Máx: 5.00 Padrão: 1.20
+        Status_fatigueMultiplierCustom = 1.2,
+        -- Enable or disable the panic effect on player trip chance.
+        Status_panic = true,
+        -- Applies when MoodleType.PANIC is level 4 or higher. Multiplies the selected movement/trait base chance; stacks multiplicatively with other active status multipliers. Padrão = 1.2x
+        -- 1 = 1.2x
+        -- 2 = 1.4x
+        -- 3 = 1.6x
+        -- 4 = 1.8x
+        -- 5 = 2.0x
+        -- 6 = Custom
+        Status_panicMultiplierPreset = 1,
+        -- Custom factor from 0.1 to 5 applied to the selected base chance while panic is active; 1.2 means base chance × 1.2, not +1.2 percentage points. Mín: 0.10 Máx: 5.00 Padrão: 1.20
+        Status_panicMultiplierCustom = 1.2,
+        -- Enable or disable the drunkenness effect on player trip chance.
+        Status_drunk = true,
+        -- Applies when MoodleType.DRUNK is level 2 or higher. Multiplies the selected movement/trait base chance; stacks multiplicatively with other active status multipliers. Padrão = Custom
+        -- 1 = 1.2x
+        -- 2 = 1.4x
+        -- 3 = 1.6x
+        -- 4 = 1.8x
+        -- 5 = 2.0x
+        -- 6 = Custom
+        Status_drunkMultiplierPreset = 6,
+        -- Custom factor from 0.1 to 5 applied to the selected base chance while drunk; 1.9 means base chance × 1.9, not +1.9 percentage points. Mín: 0.10 Máx: 5.00 Padrão: 1.90
+        Status_drunkMultiplierCustom = 1.9,
+        -- Enable or disable the cold effect on player trip chance.
+        Status_coldIllness = false,
+        -- Applies when MoodleType.HAS_A_COLD is at level 1 or higher. Multiplies the selected movement/trait base chance and stacks with other active multipliers. Padrão = 1.2x
+        -- 1 = 1.2x
+        -- 2 = 1.4x
+        -- 3 = 1.6x
+        -- 4 = 1.8x
+        -- 5 = 2.0x
+        -- 6 = Custom
+        Status_coldIllnessMultiplierPreset = 1,
+        -- Custom factor from 0.1 to 5 applied to the selected base chance while cold; it is multiplied with other active status factors. Mín: 0.10 Máx: 5.00 Padrão: 1.20
+        Status_coldIllnessMultiplierCustom = 1.2,
+        -- Enable or disable the heavy-load effect on player trip chance.
+        Status_heavyLoad = false,
+        -- Applies when MoodleType.HEAVY_LOAD is at level 1 or higher. Multiplies the selected movement/trait base chance and stacks with other active multipliers. Padrão = 1.2x
+        -- 1 = 1.2x
+        -- 2 = 1.4x
+        -- 3 = 1.6x
+        -- 4 = 1.8x
+        -- 5 = 2.0x
+        -- 6 = Custom
+        Status_heavyLoadMultiplierPreset = 1,
+        -- Custom factor from 0.1 to 5 applied to the selected base chance while heavily loaded; it is multiplied with other active status factors. Mín: 0.10 Máx: 5.00 Padrão: 1.20
+        Status_heavyLoadMultiplierCustom = 1.2,
+        -- Enable or disable the hunger effect on player trip chance.
+        Status_hungry = false,
+        -- Applies when MoodleType.HUNGRY is at level 1 or higher. Multiplies the selected movement/trait base chance and stacks with other active multipliers. Padrão = 1.2x
+        -- 1 = 1.2x
+        -- 2 = 1.4x
+        -- 3 = 1.6x
+        -- 4 = 1.8x
+        -- 5 = 2.0x
+        -- 6 = Custom
+        Status_hungryMultiplierPreset = 1,
+        -- Custom factor from 0.1 to 5 applied to the selected base chance while hungry; it is multiplied with other active status factors. Mín: 0.10 Máx: 5.00 Padrão: 1.20
+        Status_hungryMultiplierCustom = 1.2,
+        -- Enable or disable the injury effect on player trip chance.
+        Status_injured = false,
+        -- Applies when MoodleType.INJURED is at level 1 or higher. Multiplies the selected movement/trait base chance and stacks with other active multipliers. Padrão = 1.2x
+        -- 1 = 1.2x
+        -- 2 = 1.4x
+        -- 3 = 1.6x
+        -- 4 = 1.8x
+        -- 5 = 2.0x
+        -- 6 = Custom
+        Status_injuredMultiplierPreset = 1,
+        -- Custom factor from 0.1 to 5 applied to the selected base chance while injured; it is multiplied with other active status factors. Mín: 0.10 Máx: 5.00 Padrão: 1.20
+        Status_injuredMultiplierCustom = 1.2,
+        -- Enable or disable the pain effect on player trip chance.
+        Status_pain = false,
+        -- Applies when MoodleType.PAIN is at level 1 or higher. Multiplies the selected movement/trait base chance and stacks with other active multipliers. Padrão = 1.2x
+        -- 1 = 1.2x
+        -- 2 = 1.4x
+        -- 3 = 1.6x
+        -- 4 = 1.8x
+        -- 5 = 2.0x
+        -- 6 = Custom
+        Status_painMultiplierPreset = 1,
+        -- Custom factor from 0.1 to 5 applied to the selected base chance while in pain; it is multiplied with other active status factors. Mín: 0.10 Máx: 5.00 Padrão: 1.20
+        Status_painMultiplierCustom = 1.2,
+        -- Enable or disable the sickness effect on player trip chance.
+        Status_sick = false,
+        -- Applies when MoodleType.SICK is at level 1 or higher. Multiplies the selected movement/trait base chance and stacks with other active multipliers. Padrão = 1.2x
+        -- 1 = 1.2x
+        -- 2 = 1.4x
+        -- 3 = 1.6x
+        -- 4 = 1.8x
+        -- 5 = 2.0x
+        -- 6 = Custom
+        Status_sickMultiplierPreset = 1,
+        -- Custom factor from 0.1 to 5 applied to the selected base chance while sick; it is multiplied with other active status factors. Mín: 0.10 Máx: 5.00 Padrão: 1.20
+        Status_sickMultiplierCustom = 1.2,
+        -- Enable or disable the tiredness effect on player trip chance.
+        Status_tired = false,
+        -- Applies when MoodleType.TIRED is at level 1 or higher. Multiplies the selected movement/trait base chance and stacks with other active multipliers. Padrão = 1.2x
+        -- 1 = 1.2x
+        -- 2 = 1.4x
+        -- 3 = 1.6x
+        -- 4 = 1.8x
+        -- 5 = 2.0x
+        -- 6 = Custom
+        Status_tiredMultiplierPreset = 1,
+        -- Custom factor from 0.1 to 5 applied to the selected base chance while tired; it is multiplied with other active status factors. Mín: 0.10 Máx: 5.00 Padrão: 1.20
+        Status_tiredMultiplierCustom = 1.2,
+        -- Each Fitness level reduces the player's current trip chance by this percent. At 5% per level, Fitness 10 reduces it to half. Does not affect zombies. Mín: 0 Máx: 100 Padrão: 5
+        FitnessTripReduction = 5,
+        -- When enabled, Clumsy sets the base trip chance to 60%.
+        Trait_clumsy = true,
+        -- When enabled, Short-sighted sets the base trip chance to 80%.
+        Trait_shortSighted = true,
+        -- When enabled, Agoraphobic sets the base trip chance to 50%.
+        Trait_agoraphobic = true,
+        -- When enabled, Hard of hearing sets the base trip chance to 30%.
+        Trait_hardOfHearing = true,
+        -- When enabled, Feeble sets the base trip chance to 20%.
+        Trait_feeble = true,
+        -- When enabled, Unfit sets the base trip chance to 50%.
+        Trait_unfit = true,
+        -- When enabled, Weak sets the base trip chance to 40%.
+        Trait_weak = true,
+        -- When disabled, rope does not wear or break from jerks.
+        RopeDurabilityEnabled = true,
+        -- Starting durability for a newly attached rope, from 1 to 100%. Wear is applied only when rope durability is enabled. Mín: 1 Máx: 100 Padrão: 100
+        RopeDurabilityPercent = 100,
+        -- When disabled, cloth rope does not wear or break from jerks.
+        SheetRopeDurabilityEnabled = true,
+        -- Starting durability for a newly attached cloth rope, from 1 to 100%. Mín: 1 Máx: 100 Padrão: 100
+        SheetRopeDurabilityPercent = 100,
+        -- When disabled, heavy chain does not wear or break from jerks.
+        HeavyChainDurabilityEnabled = false,
+        -- Starting durability for a newly attached heavy chain, from 1 to 100%. Each qualifying jerk removes 1–2 percentage points; the chain breaks at 0%. Mín: 1 Máx: 100 Padrão: 100
+        HeavyChainDurabilityPercent = 100,
+        -- Rope and cloth rope lose durability once per real-time minute only while the towline is taut and the towing vehicle moves at least this speed. Heavy chain is affected by jerks only. Mín: 0.01 Máx: 5.00 Padrão: 0.05
+        WearSpeedThreshold = 0.05,
+    },
+    FastHoodOpening = {
+        -- Value in seconds, where 1.0 equals one second. The lower the number, the faster the hood opens. Recommended: 0.7 Mín: 0.10 Máx: 30.00 Padrão: 0.70
+        HoodTime = 0.7,
+    },
+    KillCount = {
+        -- May provoke stutters.
+        doExport = false,
+        -- Includes all kills into the final value in Post Death floating text.
+        includePostDeathUI = true,
+        -- Target time (in milliseconds) between two updates in multiplayer. Small value gives reactivity. High value reduces network use and server workload. Mín: 0 Máx: 10000000 Padrão: 500
+        MaxUpdateDelay = 500,
+        -- Each client can see every character score. Deactivate on (very large) servers to reduce Global Mod Data transfer load.
+        shareOnServer = true,
+        -- Dead characters are kept and count toward server kills. Deactivate for server that never wipe.
+        keepTrackOfDead = true,
+    },
+    BetterItemInfo = {
+        -- Allow players to see additional food spoilage estimates.
+        EnableSpoilageInfo = true,
+        -- Allow players to see additional food and liquid nutrition information.
+        EnableNutritionInfo = true,
+        -- Allow players to see additional weapon statistics.
+        EnableWeaponStats = true,
+        -- Require Cooking levels for food spoilage estimates and additional food and liquid nutrition information.
+        FoodLevelRequirement = true,
+        -- Require the relevant weapon skill levels for additional melee and firearm statistics.
+        WeaponLevelRequirement = true,
+        -- If Maintenance levels are required to see extra weapon and item condition information.
+        MaintenanceLevelRequirement = true,
     },
 }
